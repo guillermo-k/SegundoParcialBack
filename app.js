@@ -18,9 +18,10 @@ app.use("/calificaciones", calificaciones);
 app.use("/cursos", cursos);
 app.use("/usuarios", usuarios);
 
-// view engine setup *****ACÁ IRÍA PUG EN VEZ DE JADE????????????*********
+// CAMBIÉ EL MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
 
 /* ******************************************* */
 /* middleware globales a todas las rutas */
