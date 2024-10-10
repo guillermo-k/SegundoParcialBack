@@ -1,0 +1,46 @@
+
+
+
+[
+  {
+    "curso": "1A",
+    "alumnos": ["Juan Pérez", "María Gómez", "Pedro López"],
+    "id": 101,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. García", "Prof. López", "Prof. Sánchez"]
+  },
+  {
+    "curso": "1B",
+    "alumnos": ["Ana Martínez", "Lucía Fernández"],
+    "id": 102,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Ramírez", "Prof. Jiménez", "Prof. Torres"]
+  },
+  {
+    "curso": "2A",
+    "alumnos": ["Carlos Herrera", "Sofía Castro"],
+    "id": 103,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Pérez", "Prof. Medina", "Prof. Vega"]
+  },
+  {
+    "curso": "2B",
+    "alumnos": ["Diego Sánchez", "Natalia Vega"],
+    "id": 104,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Gutiérrez", "Prof. Castillo", "Prof. López"]
+  },
+  {
+    "curso": "3A",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 105,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  }
+]
+
+
+
+
+
+
