@@ -36,6 +36,41 @@
     "id": 105,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
     "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  },
+  {
+    "curso": "3B",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 106,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  },
+  {
+    "curso": "4A",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 107,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  },
+  {
+    "curso": "4B",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 108,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  },
+  {
+    "curso": "5A",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 109,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+  },
+  {
+    "curso": "5B",
+    "alumnos": ["Gonzalo Ruiz"],
+    "id": 110,
+    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
   }
 ]
 

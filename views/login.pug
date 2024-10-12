@@ -1,0 +1,16 @@
+//- Extiende el layout principal
+extends layout
+
+//- Define el bloque de contenido
+block content
+  h1 Login
+
+  //- Formulario para Login
+  form(action="/login", method="POST")
+    label(for="username") Legajo:
+    input(type="text", name="username", id="username", required)
+    br
+    label(for="pass") Contraseña:
+    input(type="password", name="pass", id="pass", required)
+    br
+    button(type="submit") Ingresar

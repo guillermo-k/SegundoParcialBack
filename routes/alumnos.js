@@ -1,9 +1,18 @@
 var express = require("express");
 var router = express.Router();
+const alumnosController = require("../controllers/alumnosController")
+const Alumnos = new alumnosController
 
-const { mostrar, mostrarPorLegajo, agregar } = require("../controllers/alumnosController");
 
 //////////////////////////////////////Rutas//////////////////////////////////////
+
+// Borrado de un alumno por legajo
+router.delete("/:legajo", async (req, res) => {
+  const {legajo} = req.params;
+  const respuesta = await Alumnos.borrar(legajo);
+  respuesta? res.status(200).render("exito",{mensaje: respuesta, url:"/alumnos/"}): res.status(400).render("error",{mensaje:"Alumno no encontrado"})
+});
+
 
 /* Agrega un alumno */
 router.get("/agregar", (req, res) => {
@@ -14,7 +23,7 @@ router.get("/agregar", (req, res) => {
 router.get("/:legajo?", async (req, res) => {
   const legajo = req.params.legajo;
 
-  const respuesta = legajo ? await mostrarPorLegajo(legajo) : await mostrar();
+  const respuesta = legajo ? await Alumnos.mostrarPorLegajo(legajo) : await Alumnos.mostrar();
 
   if (respuesta) {
     res.render("alumnos", { alumnos: Array.isArray(respuesta) ? respuesta : [respuesta] });
@@ -26,9 +35,12 @@ router.get("/:legajo?", async (req, res) => {
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
 router.post("/", async (req, res) => {
   const { body } = req;
-  const respuesta = await agregar(body);
+  const respuesta = await Alumnos.agregar(body);
 
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });
+
+
+
 
 module.exports = router;

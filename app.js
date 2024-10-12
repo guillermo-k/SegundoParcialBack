@@ -3,6 +3,8 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const methodOverride = require('method-override');
+
 
 var app = express();
 
@@ -11,6 +13,7 @@ const alumnos = require("./routes/alumnos");
 const calificaciones = require("./routes/calificaciones");
 const cursos = require("./routes/cursos");
 const usuarios = require("./routes/usuarios");
+const index = require("./routes/index")
 
 // CAMBIÉ EL MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
@@ -25,12 +28,15 @@ app.use(express.json());
 // Habilitar parsing de datos de formularios
 app.use(express.urlencoded({ extended: true }));
 
+app.use(methodOverride('_method'));
+
 app.use(logger("dev"));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 /* ******************************************* */
 
 /* app.use() se utiliza comúnmente para montar un router desde un archivo de rutas externo. */
+app.use("/", index);
 app.use("/alumnos", alumnos);
 app.use("/calificaciones", calificaciones);
 app.use("/cursos", cursos);
