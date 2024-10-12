@@ -24,6 +24,7 @@ html
             th Curso
             th Materias
             th Padre/Madre
+            th Borrar
         tbody
           each alumno in alumnos
             tr
@@ -35,5 +36,8 @@ html
                   each materia in alumno.materias
                     li= materia
               td= alumno.padre_madre
+              td
+                form(action="/alumnos/" + alumno.legajo + "?_method=DELETE", method="POST")
+                  button(type="submit") Borrar
     else
-      p No hay alumnos para mostrar
+      p No hay alumnos para mostrar
