@@ -15,10 +15,10 @@ router.get("/:legajo?", async (req, res) => {
 });
 
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
 const {body} = req 
 console.log("body desde ruta", body)
-const respuesta = Alumnos.agregar(body)
+const respuesta = await Alumnos.agregar(body)
 respuesta ? res.json(respuesta): res.sendStatus(400)
 
 })

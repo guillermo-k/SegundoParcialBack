@@ -174,5 +174,21 @@
     "padre_madre": "Roberto Sánchez",
     "contraseña": "clavesecreta",
     "legajo": 1011
+  },
+  {
+    "nombre": "cualca",
+    "curso": "4a",
+    "materias": "[lengua, matematica]",
+    "padre_madre": "pepito",
+    "contraseña": "algo123",
+    "legajo": 1014
+  },
+  {
+    "nombre": "cualca",
+    "curso": "4a",
+    "materias": "[lengua, matematica]",
+    "padre_madre": "pepito",
+    "contraseña": "algo123",
+    "legajo": 1015
   }
 ]
