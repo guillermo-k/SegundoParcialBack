@@ -1,10 +1,17 @@
-
 [
   {
     "nombre": "Juan Pérez",
     "legajo": 1001,
     "curso": "3B",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Ana García",
     "contraseña": "contraseña123"
   },
@@ -12,7 +19,15 @@
     "nombre": "María Gómez",
     "legajo": 1002,
     "curso": "1A",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Luis Gómez",
     "contraseña": "password456"
   },
@@ -20,7 +35,15 @@
     "nombre": "Pedro López",
     "legajo": 1003,
     "curso": "1A",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Rosa Martínez",
     "contraseña": "pass789"
   },
@@ -28,7 +51,15 @@
     "nombre": "Ana Martínez",
     "legajo": 1004,
     "curso": "1B",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Carlos Martínez",
     "contraseña": "contra000"
   },
@@ -36,7 +67,15 @@
     "nombre": "Lucía Fernández",
     "legajo": 1005,
     "curso": "1B",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "María Fernández",
     "contraseña": "pass1234"
   },
@@ -44,7 +83,15 @@
     "nombre": "Carlos Herrera",
     "legajo": 1006,
     "curso": "2A",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Pedro Herrera",
     "contraseña": "seguro789"
   },
@@ -52,7 +99,15 @@
     "nombre": "Sofía Castro",
     "legajo": 1007,
     "curso": "2A",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Laura Castro",
     "contraseña": "clave987"
   },
@@ -60,7 +115,15 @@
     "nombre": "Diego Sánchez",
     "legajo": 1008,
     "curso": "2B",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Roberto Sánchez",
     "contraseña": "clavesecreta"
   },
@@ -68,7 +131,15 @@
     "nombre": "Natalia Vega",
     "legajo": 1009,
     "curso": "2B",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Estela Vega",
     "contraseña": "clave123"
   },
@@ -76,11 +147,32 @@
     "nombre": "Gonzalo Ruiz",
     "legajo": 1010,
     "curso": "3A",
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
     "padre_madre": "Luciana Ruiz",
     "contraseña": "superclave"
+  },
+  {
+    "nombre": "Diego Sánchez",
+    "curso": "2B",
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
+    "padre_madre": "Roberto Sánchez",
+    "contraseña": "clavesecreta",
+    "legajo": 1011
   }
 ]
-
-
-

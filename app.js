@@ -12,12 +12,6 @@ const calificaciones = require("./routes/calificaciones");
 const cursos = require("./routes/cursos");
 const usuarios = require("./routes/usuarios");
 
-/* app.use() se utiliza comúnmente para montar un router desde un archivo de rutas externo. */
-app.use("/alumnos", alumnos);
-app.use("/calificaciones", calificaciones);
-app.use("/cursos", cursos);
-app.use("/usuarios", usuarios);
-
 // CAMBIÉ EL MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -35,6 +29,13 @@ app.use(logger("dev"));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 /* ******************************************* */
+
+/* app.use() se utiliza comúnmente para montar un router desde un archivo de rutas externo. */
+app.use("/alumnos", alumnos);
+app.use("/calificaciones", calificaciones);
+app.use("/cursos", cursos);
+app.use("/usuarios", usuarios);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

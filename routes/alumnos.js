@@ -16,9 +16,8 @@ router.get("/:legajo?", async (req, res) => {
 
 
 router.post("/", (req, res) => {
-  console.log(req)
 const {body} = req 
-console.log(body)
+console.log("body desde ruta", body)
 const respuesta = Alumnos.agregar(body)
 respuesta ? res.json(respuesta): res.sendStatus(400)
 
