@@ -4,6 +4,10 @@ var router = express.Router();
 const alumnosController = require("../controllers/alumnosController");
 const Alumnos = new alumnosController();
 
+router.get("/agregar", (req, res) => {
+  res.render("agregar_alumno"); // Renderiza la vista Pug llamada agregar-alumno.pug
+});
+
 
 router.get("/:legajo?", async (req, res) => {
   const legajo = req.params.legajo;
@@ -15,19 +19,17 @@ router.get("/:legajo?", async (req, res) => {
 });
 
 
+
+
 router.post("/", async (req, res) => {
 const {body} = req 
-console.log("body desde ruta", body)
 const respuesta = await Alumnos.agregar(body)
 respuesta ? res.json(respuesta): res.sendStatus(400)
 
 })
 
 
+
 module.exports = router;
 
 
-/* 
-const { body } = req;
-  const product = await Productos.guardar(body);
-  res.json(product); */

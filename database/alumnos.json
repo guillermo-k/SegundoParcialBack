@@ -190,5 +190,13 @@
     "padre_madre": "pepito",
     "contraseña": "algo123",
     "legajo": 1015
+  },
+  {
+    "nombre": "Soledad",
+    "curso": "4A",
+    "materias": "lengua, quimica, ingles",
+    "padre_madre": "jorge ",
+    "contraseña": "algocontraseña",
+    "legajo": 1016
   }
 ]

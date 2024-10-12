@@ -1,0 +1,40 @@
+//- Extiende el layout principal
+extends layout
+
+//- Define el bloque de contenido
+block content
+  h1 Agregar Alumno
+
+  //- Formulario para agregar un alumno
+  form(action="/alumnos", method="POST")
+    label(for="nombre") Nombre:
+    input(type="text", name="nombre", id="nombre", required)
+    br
+
+    label(for="curso") Curso:
+    select(name="curso", id="curso", required)
+      option(value="1A") 1A
+      option(value="1B") 1B
+      option(value="2A") 2A
+      option(value="2B") 2B
+      option(value="3A") 3A
+      option(value="3B") 3B
+      option(value="4A") 4A
+      option(value="4B") 4B
+      option(value="5A") 5A
+      option(value="5B") 5B
+    br
+
+    label(for="materias") Materias (separadas por coma):
+    input(type="text", name="materias", id="materias", placeholder="Lengua, Matemática, Historia", required)
+    br
+
+    label(for="padre_madre") Nombre del Padre o Madre:
+    input(type="text", name="padre_madre", id="padre_madre", required)
+    br
+
+    label(for="contraseña") Contraseña:
+    input(type="password", name="contraseña", id="contraseña", required)
+    br
+
+    button(type="submit") Agregar Alumno
