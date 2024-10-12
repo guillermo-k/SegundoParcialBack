@@ -19,7 +19,7 @@ router.get("/:legajo?", async (req, res) => {
   if (respuesta) {
     res.render("alumnos", { alumnos: Array.isArray(respuesta) ? respuesta : [respuesta] });
   } else {
-    res.sendStatus(400);
+    res.status(400).render("error", { mensaje: "El legajo ingresado no existe" });
   }
 });
 
