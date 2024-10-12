@@ -176,27 +176,40 @@
     "legajo": 1011
   },
   {
-    "nombre": "cualca",
-    "curso": "4a",
-    "materias": "[lengua, matematica]",
-    "padre_madre": "pepito",
-    "contraseña": "algo123",
+    "nombre": "sole martinez",
+    "curso": "4B",
+    "materias": [
+      "ingles",
+      "lengua",
+      "computacion"
+    ],
+    "padre_madre": "padre de sole",
+    "contraseña": "sole123",
+    "legajo": 1012
+  },
+  {
+    "nombre": "guille koster",
+    "curso": "5A",
+    "materias": [
+      "ingles",
+      "gimnasia",
+      "matematica",
+      "algebra"
+    ],
+    "padre_madre": "madre de guille",
+    "contraseña": "guille123",
+    "legajo": 1013
+  },
+  {
+    "nombre": "German Pappalardo",
+    "curso": "5B",
+    "materias": [
+      "Testing",
+      "Lógica",
+      "Jardinería"
+    ],
+    "padre_madre": "padre de Germán",
+    "contraseña": "German123",
     "legajo": 1014
-  },
-  {
-    "nombre": "cualca",
-    "curso": "4a",
-    "materias": "[lengua, matematica]",
-    "padre_madre": "pepito",
-    "contraseña": "algo123",
-    "legajo": 1015
-  },
-  {
-    "nombre": "Soledad",
-    "curso": "4A",
-    "materias": "lengua, quimica, ingles",
-    "padre_madre": "jorge ",
-    "contraseña": "algocontraseña",
-    "legajo": 1016
   }
 ]

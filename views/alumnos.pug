@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title Alumnos
+    style.
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+  body
+    h1 Lista de Alumnos
+
+    if alumnos.length
+      table
+        thead
+          tr
+            th Nombre
+            th Legajo
+            th Curso
+            th Materias
+            th Padre/Madre
+        tbody
+          each alumno in alumnos
+            tr
+              td= alumno.nombre
+              td= alumno.legajo
+              td= alumno.curso
+              td
+                ul
+                  each materia in alumno.materias
+                    li= materia
+              td= alumno.padre_madre
+    else
+      p No hay alumnos para mostrar
