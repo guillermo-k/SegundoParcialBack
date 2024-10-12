@@ -22,7 +22,6 @@ app.use("/usuarios", usuarios);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
-
 /* ******************************************* */
 /* middleware globales a todas las rutas */
 

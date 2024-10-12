@@ -1,11 +1,14 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const calificaciones=require('../database/calificaciones')
+const calificaciones = require("../database/calificaciones.json");
 
-router.get('/', (req,res)=> {
-res.render("calificaciones", { title: 'Calificaciones' })
-})
+router.get("/:alumno?", (req, res) => {
+  res.render("calificaciones", { title: "Calificaciones", cualca: "otra cosa" });
+});
 
+/* get todas
+get de cada alumno
+post (solo acceso profes) */
 
 module.exports = router;

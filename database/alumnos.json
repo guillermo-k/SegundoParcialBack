@@ -1,13 +1,9 @@
 
-
-
-
-
 [
   {
     "nombre": "Juan Pérez",
     "legajo": 1001,
-    "curso": "",
+    "curso": "3B",
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
     "padre_madre": "Ana García",
     "contraseña": "contraseña123"
