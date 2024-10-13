@@ -12,6 +12,10 @@ html
         padding: 8px;
         text-align: left;
       }
+      .sinBorde td{
+        border:none;
+        width: 50%;
+      }
   body
     h1 Lista de Alumnos
 
@@ -24,7 +28,6 @@ html
             th Curso
             th Materias
             th Padre/Madre
-            th Borrar
         tbody
           each alumno in alumnos
             tr
@@ -32,12 +35,11 @@ html
               td= alumno.legajo
               td= alumno.curso
               td
-                ul
+                table.sinBorde
                   each materia in alumno.materias
-                    li= materia
+                    tr 
+                      td= materia.materia
+                      td= materia.calificacion
               td= alumno.padre_madre
-              td
-                form(action="/alumnos/" + alumno.legajo + "?_method=DELETE", method="POST")
-                  button(type="submit") Borrar
     else
-      p No hay alumnos para mostrar
+      p No hay alumnos para mostrar

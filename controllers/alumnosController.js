@@ -3,11 +3,19 @@ const fs = require("fs");
 const path = require("path");
 const cursos = require("../database/cursos.json")
 const usuarios = require("../database/usuarios.json")
+const calificacionesController = require("../controllers/calificacionesController")
+
+const calificaciones = new calificacionesController
+
 
 class alumnosController {
   // Metodo para mostrar todos los alumnos
   mostrar() {
     try {
+      let alumnosConNotas = alumnos
+      alumnosConNotas.forEach(element => {
+        element.materias = calificaciones.obtenerCalificaciones(element.legajo)
+      });
       return alumnos;
     } catch (error) {
       throw error;
