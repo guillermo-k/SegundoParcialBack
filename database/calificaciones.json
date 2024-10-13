@@ -1,5 +1,3 @@
-
-
 [
   {
     "legajo": "Juan Pérez",
@@ -42,6 +40,11 @@
     "calificacion": 78
   },
   {
+    "legajo": 1007,
+    "materia": "Matematicas",
+    "calificacion": ""
+  },
+  {
     "legajo": 1008,
     "materia": "Lengua",
     "calificacion": 85
@@ -55,7 +58,40 @@
     "legajo": 1010,
     "materia": "Historia",
     "calificacion": 80
+  },
+  {
+    "legajo": 1025,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Inglés",
+    "calificacion": ""
   }
 ]
-
-

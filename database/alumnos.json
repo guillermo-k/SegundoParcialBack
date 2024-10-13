@@ -178,5 +178,50 @@
     ],
     "padre_madre": "Juan",
     "legajo": 1022
+  },
+  {
+    "nombre": "pepito",
+    "curso": "5B",
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
+    "padre_madre": "pepote",
+    "legajo": 1023
+  },
+  {
+    "nombre": "pepito",
+    "curso": "5B",
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
+    "padre_madre": "pepote",
+    "legajo": 1024
+  },
+  {
+    "nombre": "German Pappalardo",
+    "curso": "1B",
+    "materias": [
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
+    ],
+    "padre_madre": "Papa Pappalardo",
+    "legajo": 1025
   }
 ]

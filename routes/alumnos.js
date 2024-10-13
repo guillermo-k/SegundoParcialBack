@@ -24,7 +24,6 @@ router.get("/:legajo?", async (req, res) => {
   const legajo = req.params.legajo;
 
   const respuesta = legajo ? await Alumnos.mostrarPorLegajo(legajo) : await Alumnos.mostrar();
-
   if (respuesta) {
     res.render("alumnos", { alumnos: Array.isArray(respuesta) ? respuesta : [respuesta] });
   } else {
@@ -34,8 +33,7 @@ router.get("/:legajo?", async (req, res) => {
 
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
 router.post("/", async (req, res) => {
-  const { body } = req;
-  const respuesta = await Alumnos.agregar(body);
+  const respuesta = await Alumnos.agregar(req.body);
 
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });

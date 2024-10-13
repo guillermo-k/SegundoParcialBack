@@ -14,7 +14,7 @@ const calificaciones = require("./routes/calificaciones");
 const cursos = require("./routes/cursos");
 const usuarios = require("./routes/usuarios");
 const index = require("./routes/index")
-const login = require("./routes/login")
+const login = require("./routes/login") 
 
 // CAMBIÉ EL MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
