@@ -1,56 +1,97 @@
-
-
 [
   {
-    "nombre": "Juan Pérez",
+    "legajo": "Juan Pérez",
     "materia": "Lengua",
     "calificacion": 85
   },
   {
-    "nombre": "María Gómez",
+    "legajo": "María Gómez",
     "materia": "Matemática",
     "calificacion": 90
   },
   {
-    "nombre": "Pedro López",
+    "legajo": "Pedro López",
     "materia": "Historia",
     "calificacion": 70
   },
   {
-    "nombre": "Ana Martínez",
+    "legajo": "Ana Martínez",
     "materia": "Inglés",
     "calificacion": 92
   },
   {
-    "nombre": "Lucía Fernández",
+    "legajo": "Lucía Fernández",
     "materia": "Química",
     "calificacion": 88
   },
   {
-    "nombre": "Carlos Herrera",
+    "legajo": "Carlos Herrera",
     "materia": "Gimnasia",
     "calificacion": 95
   },
   {
-    "nombre": "Sofía Castro",
+    "legajo": 1007,
     "materia": "Geografía",
     "calificacion": 78
   },
   {
-    "nombre": "Diego Sánchez",
+    "legajo": 1007,
+    "materia": "Historia",
+    "calificacion": 78
+  },
+  {
+    "legajo": 1007,
+    "materia": "Matematicas",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1008,
     "materia": "Lengua",
     "calificacion": 85
   },
   {
-    "nombre": "Natalia Vega",
+    "legajo": 1009,
     "materia": "Matemática",
     "calificacion": 93
   },
   {
-    "nombre": "Gonzalo Ruiz",
+    "legajo": 1010,
     "materia": "Historia",
     "calificacion": 80
+  },
+  {
+    "legajo": 1025,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Inglés",
+    "calificacion": ""
   }
 ]
-
-

@@ -1,3 +1,23 @@
 [
-  {}
+  {},
+  {
+    "legajo": 1022,
+    "contraseña": "123456",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1023,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1024,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1025,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  }
 ]

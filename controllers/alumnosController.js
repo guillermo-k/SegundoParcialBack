@@ -1,13 +1,21 @@
-const alumnos = require("../database/alumnos.json");
 const fs = require("fs");
 const path = require("path");
 const cursos = require("../database/cursos.json")
+const alumnos = require("../database/alumnos.json");
 const usuarios = require("../database/usuarios.json")
+const calificacionesJSON = require("../database/calificaciones.json")
+const calificacionesController = require("../controllers/calificacionesController");
+
+const calificaciones = new calificacionesController
+
 
 class alumnosController {
   // Metodo para mostrar todos los alumnos
   mostrar() {
     try {
+        alumnos.forEach(element => {
+        element.materias = calificaciones.obtenerCalificaciones(element.legajo)
+      });
       return alumnos;
     } catch (error) {
       throw error;
@@ -18,6 +26,7 @@ class alumnosController {
   mostrarPorLegajo(legajo) {
     try {
       const alumno = alumnos.find(alumno => alumno.legajo == legajo);
+      alumno.materias = calificaciones.obtenerCalificaciones(alumno.legajo)
       return alumno;
     } catch (error) {
       throw error;
@@ -48,8 +57,21 @@ class alumnosController {
         alumnos.push(newBody);
 
         // Guardar los cambios en el archivo JSON alumnos
-        const filePath = path.join(__dirname, "../database/alumnos.json");
-        fs.writeFileSync(filePath, JSON.stringify(alumnos, null, 2), "utf-8");
+        const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
+        fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
+        
+
+        // Guardar datos de clificaciones del alumno vacias
+        const filePathCalificaciones = path.join(__dirname, "../database/calificaciones.json");
+        newBody.materias.forEach(materia => {
+          calificacionesJSON.push( {
+            "legajo": newBody.legajo,
+            "materia": materia,
+            "calificacion": ""
+          },)
+        });
+        fs.writeFileSync(filePathCalificaciones, JSON.stringify(calificacionesJSON, null, 2), "utf-8");
+        
 
         // Guarda un nuevo usuario en usuarios.JSON
         const newUsuario = { legajo, contraseña, "rol": "alumno/padre" }
