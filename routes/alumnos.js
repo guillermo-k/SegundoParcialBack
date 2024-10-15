@@ -21,7 +21,7 @@ router.get("/agregar", (req, res) => {
 
 /* Muestra lista de alumnos o alumno en particular si se le pasa su legajo */
 router.get("/:legajo?", async (req, res) => {
-  const legajo = req.params.legajo;
+  const {legajo} = req.params
 
   const respuesta = legajo ? await Alumnos.mostrarPorLegajo(legajo) : await Alumnos.mostrar();
   if (respuesta) {
