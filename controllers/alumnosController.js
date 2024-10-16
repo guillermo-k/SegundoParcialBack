@@ -4,7 +4,7 @@ const cursos = require("../database/cursos.json")
 const alumnos = require("../database/alumnos.json");
 const usuarios = require("../database/usuarios.json")
 const calificacionesJSON = require("../database/calificaciones.json")
-const calificacionesController = require("../controllers/calificacionesController");
+const calificacionesController = require("./calificacionesController");
 
 const calificaciones = new calificacionesController
 
@@ -13,7 +13,7 @@ class alumnosController {
   // Metodo para mostrar todos los alumnos
   mostrar() {
     try {
-        alumnos.forEach(element => {
+        alumnos.map(element => {
         element.materias = calificaciones.obtenerCalificaciones(element.legajo)
       });
       return alumnos;
@@ -36,18 +36,16 @@ class alumnosController {
   // Metodo para agregar un nuevo alumno
   agregar(body) {
     try {
-      console.log("body en agregar", body);
       const { nombre, curso, padre_madre, contraseña } = body;
 
       if (nombre && curso && padre_madre && contraseña) {
         ////Generación de número de legajo
         const legajo = Math.max(...alumnos.map(alumno => alumno.legajo)) + 1;
-        console.log(legajo);
 
-        //Buscar materias según curso
-        let materias = cursos.find((item) => item.curso == curso).materias
 
-        console.log("mate: ", materias)
+        // Buscar materias según curso
+        const materias = cursos.find((item) => item.curso == curso).materias
+
 
         // Convierte las materias (que vienen del form de la vista) en array
         // const materiasArray = materias.split(",").map(materia => materia.trim());
@@ -61,11 +59,11 @@ class alumnosController {
         fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
         
 
-        // Guardar datos de clificaciones del alumno vacias
+        // Guardar datos de calificaciones vacias del alumno
         const filePathCalificaciones = path.join(__dirname, "../database/calificaciones.json");
-        newBody.materias.forEach(materia => {
+        materias.map(materia => {
           calificacionesJSON.push( {
-            "legajo": newBody.legajo,
+            "legajo": legajo,
             "materia": materia,
             "calificacion": ""
           },)
