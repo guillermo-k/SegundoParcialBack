@@ -1,96 +1,701 @@
 [
   {
-    "legajo": "Juan Pérez",
+    "legajo": 1000,
     "materia": "Lengua",
-    "calificacion": 85
+    "calificacion": ""
   },
   {
-    "legajo": "María Gómez",
+    "legajo": 1000,
     "materia": "Matemática",
-    "calificacion": 90
+    "calificacion": ""
   },
   {
-    "legajo": "Pedro López",
+    "legajo": 1000,
     "materia": "Historia",
-    "calificacion": 70
+    "calificacion": ""
   },
   {
-    "legajo": "Ana Martínez",
-    "materia": "Inglés",
-    "calificacion": 92
-  },
-  {
-    "legajo": "Lucía Fernández",
-    "materia": "Química",
-    "calificacion": 88
-  },
-  {
-    "legajo": "Carlos Herrera",
+    "legajo": 1000,
     "materia": "Gimnasia",
-    "calificacion": 95
+    "calificacion": ""
+  },
+  {
+    "legajo": 1000,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1000,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1000,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1001,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1002,
+    "materia": "Lengua",
+    "calificacion": "25"
+  },
+  {
+    "legajo": 1002,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1002,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1002,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1002,
+    "materia": "Geografía",
+    "calificacion": "54"
+  },
+  {
+    "legajo": 1002,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1002,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Lengua",
+    "calificacion": "83"
+  },
+  {
+    "legajo": 1003,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1003,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1004,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Lengua",
+    "calificacion": "66"
+  },
+  {
+    "legajo": 1005,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1005,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1006,
+    "materia": "Química",
+    "calificacion": "10"
+  },
+  {
+    "legajo": 1006,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1007,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1007,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1007,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1007,
+    "materia": "Gimnasia",
+    "calificacion": ""
   },
   {
     "legajo": 1007,
     "materia": "Geografía",
-    "calificacion": 78
+    "calificacion": ""
   },
   {
     "legajo": 1007,
-    "materia": "Historia",
-    "calificacion": 78
+    "materia": "Química",
+    "calificacion": ""
   },
   {
     "legajo": 1007,
-    "materia": "Matematicas",
+    "materia": "Inglés",
     "calificacion": ""
   },
   {
     "legajo": 1008,
     "materia": "Lengua",
-    "calificacion": 85
-  },
-  {
-    "legajo": 1009,
-    "materia": "Matemática",
-    "calificacion": 93
-  },
-  {
-    "legajo": 1010,
-    "materia": "Historia",
-    "calificacion": 80
-  },
-  {
-    "legajo": 1025,
-    "materia": "Lengua",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
     "materia": "Matemática",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
     "materia": "Historia",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
     "materia": "Gimnasia",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
     "materia": "Geografía",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
     "materia": "Química",
     "calificacion": ""
   },
   {
-    "legajo": 1025,
+    "legajo": 1008,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1009,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1010,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1011,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1012,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1013,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1014,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1015,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1016,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Geografía",
+    "calificacion": "85"
+  },
+  {
+    "legajo": 1017,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1017,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1018,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Gimnasia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
     "materia": "Inglés",
     "calificacion": ""
   }

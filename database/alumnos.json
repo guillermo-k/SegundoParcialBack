@@ -1,23 +1,6 @@
 [
   {
-    "nombre": "Sofía Castro",
-    "legajo": 1007,
-    "curso": "2A",
-    "materias": [
-      "Lengua",
-      "Matemática",
-      "Historia",
-      "Gimnasia",
-      "Geografía",
-      "Química",
-      "Inglés"
-    ],
-    "padre_madre": "Laura Castro",
-    "contraseña": "clave987"
-  },
-  {
     "nombre": "Diego Sánchez",
-    "legajo": 1008,
     "curso": "2B",
     "materias": [
       "Lengua",
@@ -29,11 +12,10 @@
       "Inglés"
     ],
     "padre_madre": "Roberto Sánchez",
-    "contraseña": "clavesecreta"
+    "legajo": 1002
   },
   {
     "nombre": "Natalia Vega",
-    "legajo": 1009,
     "curso": "2B",
     "materias": [
       "Lengua",
@@ -45,11 +27,10 @@
       "Inglés"
     ],
     "padre_madre": "Estela Vega",
-    "contraseña": "clave123"
+    "legajo": 1003
   },
   {
     "nombre": "Gonzalo Ruiz",
-    "legajo": 1010,
     "curso": "3A",
     "materias": [
       "Lengua",
@@ -61,7 +42,7 @@
       "Inglés"
     ],
     "padre_madre": "Luciana Ruiz",
-    "contraseña": "superclave"
+    "legajo": 1004
   },
   {
     "nombre": "Diego Sánchez",
@@ -76,45 +57,52 @@
       "Inglés"
     ],
     "padre_madre": "Roberto Sánchez",
-    "contraseña": "clavesecreta",
-    "legajo": 1011
+    "legajo": 1005
   },
   {
     "nombre": "sole martinez",
     "curso": "4B",
     "materias": [
-      "ingles",
-      "lengua",
-      "computacion"
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "padre de sole",
-    "contraseña": "sole123",
-    "legajo": 1012
+    "legajo": 1006
   },
   {
     "nombre": "guille koster",
     "curso": "5A",
     "materias": [
-      "ingles",
-      "gimnasia",
-      "matematica",
-      "algebra"
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "madre de guille",
-    "contraseña": "guille123",
-    "legajo": 1013
+    "legajo": 1007
   },
   {
     "nombre": "German Pappalardo",
     "curso": "5B",
     "materias": [
-      "Testing",
-      "Lógica",
-      "Jardinería"
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "padre de Germán",
-    "contraseña": "German123",
-    "legajo": 1014
+    "legajo": 1008
   },
   {
     "nombre": "pepito",
@@ -129,8 +117,7 @@
       "Inglés"
     ],
     "padre_madre": "pepote",
-    "contraseña": "asd",
-    "legajo": 1019
+    "legajo": 1009
   },
   {
     "nombre": "pepito",
@@ -145,8 +132,7 @@
       "Inglés"
     ],
     "padre_madre": "pepote",
-    "contraseña": "qwe",
-    "legajo": 1020
+    "legajo": 1010
   },
   {
     "nombre": "Roberto",
@@ -161,42 +147,132 @@
       "Inglés"
     ],
     "padre_madre": "Jorge",
-    "contraseña": "12345",
-    "legajo": 1021
+    "legajo": 1011
+  },
+  {
+    "nombre": "Susana Gimenez",
+    "curso": "1A",
+    "materias": [
+      {
+        "legajo": 1012,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
+    ],
+    "padre_madre": "Cacho Gimenez",
+    "legajo": 1012
+  },
+  {
+    "nombre": "Susana Gimenez",
+    "curso": "1A",
+    "materias": [
+      {
+        "legajo": 1013,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
+    ],
+    "padre_madre": "Cacho Gimenez",
+    "legajo": 1013
+  },
+  {
+    "nombre": "Susana Gimenez",
+    "curso": "1A",
+    "materias": [
+      {
+        "legajo": 1014,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
+    ],
+    "padre_madre": "Cacho Gimenez",
+    "legajo": 1014
   },
   {
     "nombre": "Guillermo Köster",
-    "curso": "3A",
+    "curso": "1A",
     "materias": [
-      "Lengua",
-      "Matemática",
-      "Historia",
-      "Gimnasia",
-      "Geografía",
-      "Química",
-      "Inglés"
+      {
+        "legajo": 1015,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
     ],
     "padre_madre": "Juan",
-    "legajo": 1022
+    "legajo": 1015
+  },
+  {
+    "nombre": "Roberto",
+    "curso": "1A",
+    "materias": [
+      {
+        "legajo": 1016,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
+    ],
+    "padre_madre": "pepote",
+    "legajo": 1016
   },
   {
     "nombre": "pepito",
-    "curso": "5B",
+    "curso": "1A",
     "materias": [
-      "Lengua",
-      "Matemática",
-      "Historia",
-      "Gimnasia",
-      "Geografía",
-      "Química",
-      "Inglés"
+      {
+        "legajo": 1017,
+        "materia": "Lengua",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1017,
+        "materia": "Matemática",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1017,
+        "materia": "Historia",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1017,
+        "materia": "Gimnasia",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1017,
+        "materia": "Geografía",
+        "calificacion": "85"
+      },
+      {
+        "legajo": 1017,
+        "materia": "Química",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1017,
+        "materia": "Inglés",
+        "calificacion": ""
+      }
     ],
     "padre_madre": "pepote",
-    "legajo": 1023
+    "legajo": 1017
   },
   {
-    "nombre": "pepito",
-    "curso": "5B",
+    "nombre": "Guillermo",
+    "curso": "1A",
+    "materias": [
+      {
+        "legajo": 1018,
+        "materia": "Geografía",
+        "calificacion": ""
+      }
+    ],
+    "padre_madre": "Cacho Gimenez",
+    "legajo": 1018
+  },
+  {
+    "nombre": "Juan Perez",
+    "curso": "3B",
     "materias": [
       "Lengua",
       "Matemática",
@@ -206,22 +282,7 @@
       "Química",
       "Inglés"
     ],
-    "padre_madre": "pepote",
-    "legajo": 1024
-  },
-  {
-    "nombre": "German Pappalardo",
-    "curso": "1B",
-    "materias": [
-      "Lengua",
-      "Matemática",
-      "Historia",
-      "Gimnasia",
-      "Geografía",
-      "Química",
-      "Inglés"
-    ],
-    "padre_madre": "Papa Pappalardo",
-    "legajo": 1025
+    "padre_madre": "Marta Gomez de Perez",
+    "legajo": 1019
   }
 ]

@@ -1,76 +1,74 @@
 
-
-
 [
   {
     "curso": "1A",
     "alumnos": ["Juan Pérez", "María Gómez", "Pedro López"],
     "id": 101,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. García", "Prof. López", "Prof. Sánchez"]
+    "profesores": [103, 395, 733, 751, 845]
   },
   {
     "curso": "1B",
     "alumnos": ["Ana Martínez", "Lucía Fernández"],
     "id": 102,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Ramírez", "Prof. Jiménez", "Prof. Torres"]
+    "profesores": [288, 466, 509, 745, 823]
   },
   {
     "curso": "2A",
     "alumnos": ["Carlos Herrera", "Sofía Castro"],
     "id": 103,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Pérez", "Prof. Medina", "Prof. Vega"]
+    "profesores": [103, 470, 617, 745, 957]
   },
   {
     "curso": "2B",
     "alumnos": ["Diego Sánchez", "Natalia Vega"],
     "id": 104,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Gutiérrez", "Prof. Castillo", "Prof. López"]
+    "profesores": [288, 390, 470, 499, 883]
   },
   {
     "curso": "3A",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 105,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores":  [450, 509, 569, 617, 823]
   },
   {
     "curso": "3B",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 106,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores": [390, 466, 470, 751, 883]
   },
   {
     "curso": "4A",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 107,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores": [103, 288, 395, 481, 823]
   },
   {
     "curso": "4B",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 108,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores": [108, 450, 509, 466, 733]
   },
   {
     "curso": "5A",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 109,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores": [395, 499, 569, 745, 823]
   },
   {
     "curso": "5B",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 110,
     "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
-    "profesores": ["Prof. Salinas", "Prof. Morales", "Prof. Ortega"]
+    "profesores": [395, 499, 569, 466, 733]
   }
 ]
 

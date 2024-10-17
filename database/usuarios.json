@@ -1,23 +1,227 @@
 [
-  {},
   {
-    "legajo": 1022,
-    "contraseña": "123456",
+    "legajo": 1000,
+    "contraseña": "clavesecreta",
     "rol": "alumno/padre"
   },
   {
-    "legajo": 1023,
-    "contraseña": "1234",
+    "legajo": 1001,
+    "contraseña": "clavesecreta",
     "rol": "alumno/padre"
   },
   {
-    "legajo": 1024,
-    "contraseña": "1234",
+    "legajo": 1002,
+    "contraseña": "clavesecreta",
     "rol": "alumno/padre"
   },
   {
-    "legajo": 1025,
+    "legajo": 1003,
+    "contraseña": "clave123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1004,
+    "contraseña": "superclave",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1005,
+    "contraseña": "clavesecreta",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1006,
+    "contraseña": "sole123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1007,
+    "contraseña": "guille123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1008,
+    "contraseña": "German123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1009,
+    "contraseña": "asd",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1010,
+    "contraseña": "qwe",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1011,
+    "contraseña": "12345",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 395,
+    "contraseña": "QasjBGo8",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 845,
+    "contraseña": "O8G7xKLp",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 751,
+    "contraseña": "BM0QkXKZ",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 733,
+    "contraseña": "RXa3Fy1Z",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 103,
+    "contraseña": "5hewwDxp",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 481,
+    "contraseña": "NsZc9T2K",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 509,
+    "contraseña": "OpnFUubL",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 823,
+    "contraseña": "QChnut8O",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 957,
+    "contraseña": "2IfyKQ3m",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 745,
+    "contraseña": "NDN7UuDs",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 617,
+    "contraseña": "swKpY8Tc",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 288,
+    "contraseña": "NeMw2gpc",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 499,
+    "contraseña": "XSfDq69E",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 466,
+    "contraseña": "IWVcORH5",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 450,
+    "contraseña": "lGCag4Vl",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 883,
+    "contraseña": "SjKSdoYP",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 390,
+    "contraseña": "ILjkOcoQ",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 108,
+    "contraseña": "s05fhaad",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 569,
+    "contraseña": "t8wkCZ8l",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 470,
+    "contraseña": "XsZP3uWg",
+    "rol": "profesor"
+  },
+  {
+    "legajo": 64,
+    "contraseña": "LfNFnUOo",
+    "rol": "administrador"
+  },
+  {
+    "legajo": 8,
+    "contraseña": "OcQYz0Qg",
+    "rol": "administrador"
+  },
+  {
+    "legajo": 1,
+    "contraseña": "jN6sB2NZ",
+    "rol": "administrador"
+  },
+  {
+    "legajo": 56,
+    "contraseña": "roTJ6RtM",
+    "rol": "administrador"
+  },
+  {
+    "legajo": 84,
+    "contraseña": "pCdD7kKE",
+    "rol": "administrador"
+  },
+  {
+    "legajo": 1012,
+    "contraseña": "12",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1013,
     "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1014,
+    "contraseña": "546",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1015,
+    "contraseña": "147",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1016,
+    "contraseña": "154",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1017,
+    "contraseña": "145",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1018,
+    "contraseña": "159",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1019,
+    "contraseña": "951",
     "rol": "alumno/padre"
   }
 ]
