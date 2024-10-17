@@ -10,13 +10,32 @@ const calificaciones = new calificacionesController
 
 
 class alumnosController {
+
+  // borrarMaterias(){
+  //   console.log(alumnos)
+  //   alumnos.forEach(alumno=>{
+  //     alumno.materias = [
+  //       "Lengua",
+  //       "Matemática",
+  //       "Historia",
+  //       "Gimnasia",
+  //       "Geografía",
+  //       "Química",
+  //       "Inglés"
+  //     ]
+  //   })
+  //   const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
+  //   fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
+  // }
+
   // Metodo para mostrar todos los alumnos
   mostrar() {
     try {
-        alumnos.map(element => {
-        element.materias = calificaciones.obtenerCalificaciones(element.legajo)
+      const alumnos2 = JSON.parse(JSON.stringify(alumnos))
+        alumnos2.map(element => {
+        element.materias = calificaciones.obtenerCalificacionesPorLegajo(element.legajo)
       });
-      return alumnos;
+      return alumnos2;
     } catch (error) {
       throw error;
     }
@@ -26,8 +45,22 @@ class alumnosController {
   mostrarPorLegajo(legajo) {
     try {
       const alumno = alumnos.find(alumno => alumno.legajo == legajo);
-      alumno.materias = calificaciones.obtenerCalificaciones(alumno.legajo)
-      return alumno;
+      if(alumno){
+      alumno.materias = calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo)
+      return alumno;}
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Metodo para mostrar un alumno por su curso
+  mostrarPorCursoYMateria(curso,materia) {
+    try {
+      const alumnosCurso = alumnos.filter(alumno => alumno.curso == curso);
+      alumnosCurso.map(element => {
+        element.materias = calificaciones.obtenerCalificacionesPorLegajo(element.legajo).filter( element =>element.materia == materia)
+      });
+      return alumnosCurso;
     } catch (error) {
       throw error;
     }
@@ -100,6 +133,9 @@ class alumnosController {
         const newUsuarios = usuarios.filter(it => it.legajo != legajo)
         const filePathUsuarios = path.join(__dirname, "../database/usuarios.json");
         fs.writeFileSync(filePathUsuarios, JSON.stringify(newUsuarios, null, 2), "utf-8");
+
+        // Borrado de las calificaciones del alumno
+        calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo)
 
 
         return `El alumno con legajo N° ${legajo} ha sido eliminado correctamente de la base de datos.`

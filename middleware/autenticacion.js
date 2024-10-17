@@ -4,10 +4,10 @@ const usuarios = require("../database/usuarios.json");
     return usuarios.find(usuario => usuario.legajo == legajo);
   }
 
-  function autentificarUsuario(req, res, next) {
+  function autenticarUsuario(req, res, next) {
     const { legajo, pass } = req.body;
     const usuario = buscarPorLegajo(legajo);
-    if(usuario.contraseña == pass){
+    if(usuario && usuario.contraseña == pass){
       req.rol = usuario.rol
       next()
     }
@@ -16,4 +16,4 @@ const usuarios = require("../database/usuarios.json");
   }
 
 
-module.exports = autentificarUsuario;
+module.exports = autenticarUsuario;

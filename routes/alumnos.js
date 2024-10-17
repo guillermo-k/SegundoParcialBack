@@ -6,11 +6,17 @@ const Alumnos = new alumnosController
 
 //////////////////////////////////////Rutas//////////////////////////////////////
 
+// router.get("/borrar/materias",(req,res)=>{
+//   Alumnos.borrarMaterias()
+// })
+
 // Borrado de un alumno por legajo
 router.delete("/:legajo", async (req, res) => {
   const {legajo} = req.params;
   const respuesta = await Alumnos.borrar(legajo);
   respuesta? res.status(200).render("exito",{mensaje: respuesta, url:"/alumnos/"}): res.status(400).render("error",{mensaje:"Alumno no encontrado"})
+
+  //////Falta borrar calificaciones*********************
 });
 
 
@@ -37,7 +43,6 @@ router.post("/", async (req, res) => {
 
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });
-
 
 
 
