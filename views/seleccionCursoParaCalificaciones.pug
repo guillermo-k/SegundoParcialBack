@@ -1,0 +1,17 @@
+extends layout 
+
+block content
+    h1 Carga de Calificaciones 
+    table 
+        thead 
+            th Curso 
+            th Materia 
+        tbody 
+            each curso in cursosDeProf
+                tr
+                    td= curso.curso 
+                    td
+                        ul 
+                            each materia in curso.materias 
+                                li
+                                    a(href="/calificaciones/form?materia="+materia+"&curso="+curso.curso)= materia

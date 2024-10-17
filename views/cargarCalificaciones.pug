@@ -1,0 +1,29 @@
+extends layout 
+block header 
+    style.
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+block content
+    h1= materia
+    form(action="/calificaciones/cargar", method="POST")
+        input(type="hidden", name="materia",value=materia)
+        table 
+            thead 
+                td Alumno 
+                td Legajo
+                td Calificacion 
+            tbody 
+                    each alumno in alumnos 
+                        tr 
+                            td= alumno.nombre
+                            td= alumno.legajo
+                            td
+                                input(type="text", name=alumno.legajo,  value= alumno.materias[0].calificacion) 
+        button(type="submit") Cargar calificaciones 
