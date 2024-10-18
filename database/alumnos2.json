@@ -3,270 +3,270 @@
     "nombre": "Diego Fernández",
     "curso": "2B",
     "materias": [
-      "Inglés",
-      "Educación Física",
-      "Filosofía",
-      "Arte",
-      "Sociología",
+      "Lengua",
+      "Matemática",
       "Historia",
-      "Educación Cívica"
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Roberto Fernández",
-    "legajo": 1000
+    "legajo": 1002
   },
   {
     "nombre": "Natalia García",
     "curso": "2B",
     "materias": [
-      "Inglés",
-      "Educación Física",
-      "Filosofía",
-      "Arte",
-      "Sociología",
+      "Lengua",
+      "Matemática",
       "Historia",
-      "Educación Cívica"
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Estela García",
-    "legajo": 1001
+    "legajo": 1003
   },
   {
     "nombre": "Gonzalo Romero",
     "curso": "3A",
     "materias": [
+      "Lengua",
       "Matemática",
-      "Biología",
-      "Física",
-      "Educación Cívica",
-      "Arte",
+      "Historia",
+      "Gimnasia",
       "Geografía",
+      "Química",
       "Inglés"
     ],
     "padre_madre": "Luciana Romero",
-    "legajo": 1002
+    "legajo": 1004
   },
   {
     "nombre": "Matías Pérez",
     "curso": "2B",
     "materias": [
-      "Inglés",
-      "Educación Física",
-      "Filosofía",
-      "Arte",
-      "Sociología",
+      "Lengua",
+      "Matemática",
       "Historia",
-      "Educación Cívica"
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Roberto Pérez",
-    "legajo": 1003
+    "legajo": 1005
   },
   {
     "nombre": "Sofía Martínez",
     "curso": "4B",
     "materias": [
-      "Inglés",
+      "Lengua",
       "Matemática",
-      "Educación Física",
-      "Química",
-      "Geografía",
       "Historia",
-      "Lengua"
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Jorge Martínez",
-    "legajo": 1004
+    "legajo": 1006
   },
   {
     "nombre": "Guillermo López",
     "curso": "5A",
     "materias": [
-      "Arte",
-      "Física",
-      "Economía",
-      "Matemática",
       "Lengua",
+      "Matemática",
       "Historia",
-      "Biología"
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "María López",
-    "legajo": 1005
+    "legajo": 1007
   },
   {
     "nombre": "Germán Pappalardo",
     "curso": "5B",
     "materias": [
-      "Educación Cívica",
-      "Inglés",
-      "Filosofía",
-      "Química",
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Sociología",
-      "Educación Física"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Juan Pappalardo",
-    "legajo": 1006
+    "legajo": 1008
   },
   {
     "nombre": "Pedro González",
     "curso": "2A",
     "materias": [
-      "Geografía",
-      "Historia",
-      "Matemática",
-      "Química",
-      "Física",
       "Lengua",
-      "Biología"
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "José González",
-    "legajo": 1007
+    "legajo": 1009
   },
   {
     "nombre": "Lucas Ramírez",
     "curso": "5B",
     "materias": [
-      "Educación Cívica",
-      "Inglés",
-      "Filosofía",
-      "Química",
+      "Lengua",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Sociología",
-      "Educación Física"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Carlos Ramírez",
-    "legajo": 1008
+    "legajo": 1010
   },
   {
     "nombre": "Roberto Suárez",
     "curso": "2A",
     "materias": [
-      "Geografía",
-      "Historia",
-      "Matemática",
-      "Química",
-      "Física",
       "Lengua",
-      "Biología"
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Jorge Suárez",
-    "legajo": 1009
+    "legajo": 1011
   },
   {
     "nombre": "Susana López",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Cacho López",
-    "legajo": 1010
+    "legajo": 1012
   },
   {
     "nombre": "Claudia Gómez",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Roberto Gómez",
-    "legajo": 1011
+    "legajo": 1013
   },
   {
     "nombre": "María Jiménez",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Carlos Jiménez",
-    "legajo": 1012
+    "legajo": 1014
   },
   {
     "nombre": "Javier Torres",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Juan Torres",
-    "legajo": 1013
+    "legajo": 1015
   },
   {
     "nombre": "Roberto Estrada",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "José Estrada",
-    "legajo": 1014
+    "legajo": 1016
   },
   {
     "nombre": "Lucas Vargas",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Marcelo Vargas",
-    "legajo": 1015
+    "legajo": 1017
   },
   {
     "nombre": "Guillermo Castillo",
     "curso": "1A",
     "materias": [
-      "Matemática",
       "Lengua",
-      "Biología",
-      "Química",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
       "Geografía",
-      "Física",
-      "Historia"
+      "Química",
+      "Inglés"
     ],
     "padre_madre": "Ramón Castillo",
-    "legajo": 1016
+    "legajo": 1018
   },
   {
     "nombre": "Juan Pérez",
     "curso": "3B",
     "materias": [
       "Lengua",
-      "Filosofía",
-      "Economía",
-      "Educación Física",
+      "Matemática",
+      "Historia",
+      "Gimnasia",
+      "Geografía",
       "Química",
-      "Arte",
-      "Historia"
+      "Inglés"
     ],
     "padre_madre": "Marta Pérez",
-    "legajo": 1017
+    "legajo": 1019
   }
 ]

@@ -1,65 +1,5 @@
 [
   {
-    "legajo": 1000,
-    "contraseña": "clavesecreta",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1001,
-    "contraseña": "clavesecreta",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1002,
-    "contraseña": "clavesecreta",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1003,
-    "contraseña": "clave123",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1004,
-    "contraseña": "superclave",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1005,
-    "contraseña": "clavesecreta",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1006,
-    "contraseña": "sole123",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1007,
-    "contraseña": "guille123",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1008,
-    "contraseña": "German123",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1009,
-    "contraseña": "asd",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1010,
-    "contraseña": "qwe",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1011,
-    "contraseña": "12345",
-    "rol": "alumno/padre"
-  },
-  {
     "legajo": 395,
     "contraseña": "QasjBGo8",
     "rol": "profesor"
@@ -185,43 +125,93 @@
     "rol": "administrador"
   },
   {
+    "legajo": 1000,
+    "contraseña": "u9AN",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1001,
+    "contraseña": "uZnX",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1002,
+    "contraseña": "GenZ",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1003,
+    "contraseña": "ztOQ",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1004,
+    "contraseña": "JFyw",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1005,
+    "contraseña": "ZGsb",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1006,
+    "contraseña": "mxSA",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1007,
+    "contraseña": "SAoJ",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1008,
+    "contraseña": "LZO3",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1009,
+    "contraseña": "FzPK",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1010,
+    "contraseña": "bomM",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1011,
+    "contraseña": "St3n",
+    "rol": "alumno/padre"
+  },
+  {
     "legajo": 1012,
-    "contraseña": "12",
+    "contraseña": "LBHP",
     "rol": "alumno/padre"
   },
   {
     "legajo": 1013,
-    "contraseña": "123",
+    "contraseña": "h4tu",
     "rol": "alumno/padre"
   },
   {
     "legajo": 1014,
-    "contraseña": "546",
+    "contraseña": "QhHY",
     "rol": "alumno/padre"
   },
   {
     "legajo": 1015,
-    "contraseña": "147",
+    "contraseña": "PFwf",
     "rol": "alumno/padre"
   },
   {
     "legajo": 1016,
-    "contraseña": "154",
+    "contraseña": "DvHs",
     "rol": "alumno/padre"
   },
   {
     "legajo": 1017,
-    "contraseña": "145",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1018,
-    "contraseña": "159",
-    "rol": "alumno/padre"
-  },
-  {
-    "legajo": 1019,
-    "contraseña": "951",
+    "contraseña": "HFJu",
     "rol": "alumno/padre"
   }
 ]

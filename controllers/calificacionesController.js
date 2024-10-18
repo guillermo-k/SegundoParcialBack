@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const calificaciones = require("../database/calificaciones.json")
+let calificaciones = require("../database/calificaciones.json")
 const cursos = require("../database/cursos.json")
 
 class calificacionesController{
@@ -14,7 +14,7 @@ class calificacionesController{
             throw error
         }
     }
-
+    /// Por ahora en desuso
     obtenerCalificacionesPorMateria(materia){
         return calificaciones.filter(it=>it.materia == materia)
     }
@@ -25,10 +25,10 @@ class calificacionesController{
     }
 
 
-    cargarCalificacionesAlJSON(algo){
-        const materia = algo.materia
-        delete algo.materia
-        for (const [legajo, calificacion] of Object.entries(algo)) {
+    cargarCalificacionesAlJSON(datosAlumno){
+        const materia = datosAlumno.materia
+        delete datosAlumno.materia
+        for (const [legajo, calificacion] of Object.entries(datosAlumno)) {
             calificaciones.find(it=> it.materia == materia && it.legajo == legajo).calificacion = calificacion
           }
 
@@ -37,10 +37,9 @@ class calificacionesController{
     }
 
     borrarCalificacionesDeJsonPorLegajo(legajo){
-        const newCalificaciones = calificaciones.filter(it=> it.legajo != legajo)
-        console.log(newCalificaciones)
+        calificaciones = calificaciones.filter(it=> it.legajo != legajo)
         const filePath = path.join(__dirname, "../database/calificaciones.json");
-        fs.writeFileSync(filePath, JSON.stringify(newCalificaciones, null, 2), "utf-8");
+        fs.writeFileSync(filePath, JSON.stringify(calificaciones, null, 2), "utf-8");
     }
 }
 

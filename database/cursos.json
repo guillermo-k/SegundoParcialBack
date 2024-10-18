@@ -2,78 +2,63 @@
 [
   {
     "curso": "1A",
-    "alumnos": ["Juan Pérez", "María Gómez", "Pedro López"],
     "id": 101,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": ["Matemática", "Lengua", "Biología", "Química", "Geografía", "Física", "Historia"],
     "profesores": [103, 395, 733, 751, 845]
   },
   {
     "curso": "1B",
-    "alumnos": ["Ana Martínez", "Lucía Fernández"],
     "id": 102,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": ["Inglés", "Filosofía", "Educación Física", "Economía", "Arte", "Sociología", "Educación Cívica"],
     "profesores": [288, 466, 509, 745, 823]
   },
   {
     "curso": "2A",
-    "alumnos": ["Carlos Herrera", "Sofía Castro"],
     "id": 103,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias": ["Geografía", "Historia", "Matemática", "Química", "Física", "Lengua", "Biología"],
     "profesores": [103, 470, 617, 745, 957]
   },
   {
     "curso": "2B",
-    "alumnos": ["Diego Sánchez", "Natalia Vega"],
     "id": 104,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Inglés", "Educación Física", "Filosofía", "Arte", "Sociología", "Historia", "Educación Cívica"],
     "profesores": [288, 390, 470, 499, 883]
   },
   {
     "curso": "3A",
     "alumnos": ["Gonzalo Ruiz"],
     "id": 105,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Matemática", "Biología", "Física", "Educación Cívica", "Arte", "Geografía", "Inglés"],
     "profesores":  [450, 509, 569, 617, 823]
   },
   {
     "curso": "3B",
-    "alumnos": ["Gonzalo Ruiz"],
     "id": 106,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Lengua", "Filosofía", "Economía", "Educación Física", "Química", "Arte", "Historia"],
     "profesores": [390, 466, 470, 751, 883]
   },
   {
     "curso": "4A",
-    "alumnos": ["Gonzalo Ruiz"],
     "id": 107,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Geografía", "Sociología", "Lengua", "Educación Cívica", "Filosofía", "Matemática", "Biología"],
     "profesores": [103, 288, 395, 481, 823]
   },
   {
     "curso": "4B",
-    "alumnos": ["Gonzalo Ruiz"],
     "id": 108,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Inglés", "Matemática", "Educación Física", "Química", "Geografía", "Historia", "Lengua"],
     "profesores": [108, 450, 509, 466, 733]
   },
   {
     "curso": "5A",
-    "alumnos": ["Gonzalo Ruiz"],
     "id": 109,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Arte", "Física", "Economía", "Matemática", "Lengua", "Historia", "Biología"],
     "profesores": [395, 499, 569, 745, 823]
   },
   {
     "curso": "5B",
-    "alumnos": ["Gonzalo Ruiz"],
     "id": 110,
-    "materias": ["Lengua", "Matemática", "Historia", "Gimnasia", "Geografía", "Química", "Inglés"],
+    "materias":   ["Educación Cívica", "Inglés", "Filosofía", "Química", "Geografía", "Sociología", "Educación Física"],
     "profesores": [395, 499, 569, 466, 733]
   }
 ]
-
-
-
-
-
-
