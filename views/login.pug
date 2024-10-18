@@ -4,9 +4,8 @@ extends layout
 //- Define el bloque de contenido
 block content
   h1 Login
-
   //- Formulario para Login
-  form(action="/login", method="POST")
+  form(class="form-login" action="/login", method="POST")
     label(for="legajo") Legajo:
     input(type="text", name="legajo", id="legajo", required)
     br

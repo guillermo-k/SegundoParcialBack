@@ -17,14 +17,14 @@ block content
         input(type="hidden", name="legajo", value=legajo)
         table 
             thead 
-                td Alumno 
-                td Legajo
-                td Calificacion 
+                th Alumno 
+                th Legajo
+                th Calificacion 
             tbody 
                     each alumno in alumnos 
                         tr 
                             td= alumno.nombre
                             td= alumno.legajo
                             td
-                                input(type="text", name=alumno.legajo,  value= alumno.materias[0].calificacion) 
+                                input(type="text", name=alumno.legajo,  value= alumno.materias[0].calificacion)
         button(type="submit") Cargar calificaciones 

@@ -1,45 +1,46 @@
-doctype html
-html
-  head
-    title Alumnos
-    style.
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-      }
-      .sinBorde td{
-        border:none;
-        width: 50%;
-      }
-  body
-    h1 Lista de Alumnos
+extends layout
 
-    if alumnos.length
-      table
-        thead
+block header
+  title Alumnos
+  style.
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    .sinBorde td{
+      border:none;
+      width: 50%;
+    }
+    
+block content
+  h1 Lista de Alumnos
+
+  if alumnos.length
+    table
+      thead
+        tr
+          th Nombre
+          th Legajo
+          th Curso
+          th Materias/Nota
+          th Padre/Madre
+      tbody
+        each alumno in alumnos
           tr
-            th Nombre
-            th Legajo
-            th Curso
-            th Materias/Nota
-            th Padre/Madre
-        tbody
-          each alumno in alumnos
-            tr
-              td= alumno.nombre
-              td= alumno.legajo
-              td= alumno.curso
-              td
-                table.sinBorde
-                  each materia in alumno.materias
-                    tr 
-                      td= materia.materia
-                      td= materia.calificacion
-              td= alumno.padre_madre
-    else
-      p No hay alumnos para mostrar
+            td= alumno.nombre
+            td= alumno.legajo
+            td= alumno.curso
+            td
+              table.sinBorde
+                each materia in alumno.materias
+                  tr 
+                    td= materia.materia
+                    td= materia.calificacion
+            td= alumno.padre_madre
+  else
+    p No hay alumnos para mostrar
