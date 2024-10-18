@@ -268,5 +268,290 @@
     ],
     "padre_madre": "Marta Pérez",
     "legajo": 1017
+  },
+  {
+    "nombre": "Lucía Martínez",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "Ana Pérez",
+    "legajo": 1019
+  },
+  {
+    "nombre": "Sofía López",
+    "curso": "3A",
+    "materias": [
+      "Matemática",
+      "Biología",
+      "Física",
+      "Educación Cívica",
+      "Arte",
+      "Geografía",
+      "Inglés"
+    ],
+    "padre_madre": "Carlos López",
+    "legajo": 1020
+  },
+  {
+    "nombre": "Mateo Rodríguez",
+    "curso": "4A",
+    "materias": [
+      "Geografía",
+      "Sociología",
+      "Lengua",
+      "Educación Cívica",
+      "Filosofía",
+      "Matemática",
+      "Biología"
+    ],
+    "padre_madre": "María Rodríguez",
+    "legajo": 1021
+  },
+  {
+    "nombre": "Camila González",
+    "curso": "5B",
+    "materias": [
+      "Educación Cívica",
+      "Inglés",
+      "Filosofía",
+      "Química",
+      "Geografía",
+      "Sociología",
+      "Educación Física"
+    ],
+    "padre_madre": "José González",
+    "legajo": 1022
+  },
+  {
+    "nombre": "Lucas Gómez",
+    "curso": "1B",
+    "materias": [
+      "Inglés",
+      "Filosofía",
+      "Educación Física",
+      "Economía",
+      "Arte",
+      "Sociología",
+      "Educación Cívica"
+    ],
+    "padre_madre": "Carmen Gómez",
+    "legajo": 1023
+  },
+  {
+    "nombre": "Federico Méndez",
+    "curso": "1B",
+    "materias": [
+      "Inglés",
+      "Filosofía",
+      "Educación Física",
+      "Economía",
+      "Arte",
+      "Sociología",
+      "Educación Cívica"
+    ],
+    "padre_madre": "Esteban Méndez",
+    "legajo": 1024
+  },
+  {
+    "nombre": "Bruno Herrera",
+    "curso": "1B",
+    "materias": [
+      "Inglés",
+      "Filosofía",
+      "Educación Física",
+      "Economía",
+      "Arte",
+      "Sociología",
+      "Educación Cívica"
+    ],
+    "padre_madre": "Alejandra Herrera",
+    "legajo": 1025
+  },
+  {
+    "nombre": "Valentina Ruiz",
+    "curso": "2A",
+    "materias": [
+      "Geografía",
+      "Historia",
+      "Matemática",
+      "Química",
+      "Física",
+      "Lengua",
+      "Biología"
+    ],
+    "padre_madre": "Luis Ruiz",
+    "legajo": 1026
+  },
+  {
+    "nombre": "Tomás Ramírez",
+    "curso": "3B",
+    "materias": [
+      "Lengua",
+      "Filosofía",
+      "Economía",
+      "Educación Física",
+      "Química",
+      "Arte",
+      "Historia"
+    ],
+    "padre_madre": "Laura Ramírez",
+    "legajo": 1027
+  },
+  {
+    "nombre": "Martina Torres",
+    "curso": "4A",
+    "materias": [
+      "Geografía",
+      "Sociología",
+      "Lengua",
+      "Educación Cívica",
+      "Filosofía",
+      "Matemática",
+      "Biología"
+    ],
+    "padre_madre": "Pablo Torres",
+    "legajo": 1028
+  },
+  {
+    "nombre": "Maximiliano Vega",
+    "curso": "4A",
+    "materias": [
+      "Geografía",
+      "Sociología",
+      "Lengua",
+      "Educación Cívica",
+      "Filosofía",
+      "Matemática",
+      "Biología"
+    ],
+    "padre_madre": "Roberto Vega",
+    "legajo": 1029
+  },
+  {
+    "nombre": "Julieta Romero",
+    "curso": "5B",
+    "materias": [
+      "Educación Cívica",
+      "Inglés",
+      "Filosofía",
+      "Química",
+      "Geografía",
+      "Sociología",
+      "Educación Física"
+    ],
+    "padre_madre": "Sofía Romero",
+    "legajo": 1030
+  },
+  {
+    "nombre": "Agustina Silva",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "Miguel Silva",
+    "legajo": 1031
+  },
+  {
+    "nombre": "Emilia Castro",
+    "curso": "2B",
+    "materias": [
+      "Inglés",
+      "Educación Física",
+      "Filosofía",
+      "Arte",
+      "Sociología",
+      "Historia",
+      "Educación Cívica"
+    ],
+    "padre_madre": "Mónica Castro",
+    "legajo": 1032
+  },
+  {
+    "nombre": "Catalina Paredes",
+    "curso": "3A",
+    "materias": [
+      "Matemática",
+      "Biología",
+      "Física",
+      "Educación Cívica",
+      "Arte",
+      "Geografía",
+      "Inglés"
+    ],
+    "padre_madre": "Luciana Paredes",
+    "legajo": 1033
+  },
+  {
+    "nombre": "Ignacio Ríos",
+    "curso": "3B",
+    "materias": [
+      "Lengua",
+      "Filosofía",
+      "Economía",
+      "Educación Física",
+      "Química",
+      "Arte",
+      "Historia"
+    ],
+    "padre_madre": "Gabriela Ríos",
+    "legajo": 1034
+  },
+  {
+    "nombre": "Florencia Sosa",
+    "curso": "4B",
+    "materias": [
+      "Inglés",
+      "Matemática",
+      "Educación Física",
+      "Química",
+      "Geografía",
+      "Historia",
+      "Lengua"
+    ],
+    "padre_madre": "Juan Sosa",
+    "legajo": 1035
+  },
+  {
+    "nombre": "Joaquín Díaz",
+    "curso": "5A",
+    "materias": [
+      "Arte",
+      "Física",
+      "Economía",
+      "Matemática",
+      "Lengua",
+      "Historia",
+      "Biología"
+    ],
+    "padre_madre": "Sandra Díaz",
+    "legajo": 1036
+  },
+  {
+    "nombre": "Brenda Castro",
+    "curso": "1B",
+    "materias": [
+      "Inglés",
+      "Filosofía",
+      "Educación Física",
+      "Economía",
+      "Arte",
+      "Sociología",
+      "Educación Cívica"
+    ],
+    "padre_madre": "Gustavo Castro",
+    "legajo": 1037
   }
 ]

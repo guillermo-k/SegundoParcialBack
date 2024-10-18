@@ -81,7 +81,7 @@
   },
   {
     "legajo": 390,
-    "contraseña": "ILjkOcoQ",
+    "contraseña": "1234",
     "rol": "profesor"
   },
   {
@@ -212,6 +212,101 @@
   {
     "legajo": 1017,
     "contraseña": "HFJu",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1019,
+    "contraseña": "YkTo",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1020,
+    "contraseña": "XcyC",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1021,
+    "contraseña": "1HqZ",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1022,
+    "contraseña": "DL7N",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1023,
+    "contraseña": "0ebN",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1024,
+    "contraseña": "jXgw",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1025,
+    "contraseña": "atoi",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1026,
+    "contraseña": "cIcX",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1027,
+    "contraseña": "tLw8",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1028,
+    "contraseña": "fh55",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1029,
+    "contraseña": "BMVd",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1030,
+    "contraseña": "vota",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1031,
+    "contraseña": "ZoZo",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1032,
+    "contraseña": "UFEv",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1033,
+    "contraseña": "xqoq",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1034,
+    "contraseña": "CFC2",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1035,
+    "contraseña": "EzV6",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1036,
+    "contraseña": "i9CK",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1037,
+    "contraseña": "Nvju",
     "rol": "alumno/padre"
   }
 ]

@@ -10,10 +10,10 @@ const Alumnos = new alumnosController
 //   Alumnos.borrarMaterias()
 // })
 
-// router.get("/algo",(req,res)=>{
-//     Alumnos.algo()
-//     res.send("ando")
-// })
+router.get("/algo",(req,res)=>{
+    Alumnos.algo()
+    res.send("ando")
+})
 
 
 // Borrado de un alumno por legajo

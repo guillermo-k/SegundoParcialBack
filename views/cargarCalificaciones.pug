@@ -14,6 +14,7 @@ block content
     h1= materia
     form(action="/calificaciones/cargar", method="POST")
         input(type="hidden", name="materia",value=materia)
+        input(type="hidden", name="legajo", value=legajo)
         table 
             thead 
                 td Alumno 

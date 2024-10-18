@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const cursos = require("../database/cursos.json")
 let alumnos = require("../database/alumnos.json");
-//let alumnos2 = require("../database/alumnos2.json");
+let alumnos2 = require("../database/alumnos2.json");
 let usuarios = require("../database/usuarios.json")
 let calificacionesJSON = require("../database/calificaciones.json")
 const calificacionesController = require("./calificacionesController");
@@ -11,6 +11,14 @@ const calificaciones = new calificacionesController
 
 
 class alumnosController {
+
+  algo(){
+    alumnos2.forEach(a=>{
+    let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    a.contraseña = Array.from({ length: 4 }, () => caracteres[Math.floor(Math.random() * caracteres.length)]).join('');
+    let alumno = {"nombre": a.nombre, "curso": a.curso, "padre_madre": a.padre_madre, "contraseña": a.contraseña} 
+      this.agregar(alumno)})
+  }
 
 
   // Metodo para mostrar todos los alumnos
@@ -136,13 +144,7 @@ class alumnosController {
 
   ////////////////// Metodos usados en desarrollo
 
-  // algo(){
-  //   alumnos2.forEach(a=>{
-  //   let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  //   a.contraseña = Array.from({ length: 4 }, () => caracteres[Math.floor(Math.random() * caracteres.length)]).join('');
-  //   let alumno = {"nombre": a.nombre, "curso": a.curso, "padre_madre": a.padre_madre, "contraseña": a.contraseña} 
-  //     this.agregar(alumno)})
-  // }
+  
 
 
   // borrarMaterias(){

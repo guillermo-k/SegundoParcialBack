@@ -3,7 +3,7 @@
   {
     "legajo": 1000,
     "materia": "Inglés",
-    "calificacion": ""
+    "calificacion": "50"
   },
   {
     "legajo": 1000,
@@ -33,12 +33,12 @@
   {
     "legajo": 1000,
     "materia": "Educación Cívica",
-    "calificacion": ""
+    "calificacion": "50"
   },
   {
     "legajo": 1001,
     "materia": "Inglés",
-    "calificacion": ""
+    "calificacion": "90"
   },
   {
     "legajo": 1001,
@@ -68,7 +68,7 @@
   {
     "legajo": 1001,
     "materia": "Educación Cívica",
-    "calificacion": ""
+    "calificacion": "90"
   },
   {
     "legajo": 1002,
@@ -108,7 +108,7 @@
   {
     "legajo": 1003,
     "materia": "Inglés",
-    "calificacion": ""
+    "calificacion": "95"
   },
   {
     "legajo": 1003,
@@ -138,7 +138,7 @@
   {
     "legajo": 1003,
     "materia": "Educación Cívica",
-    "calificacion": ""
+    "calificacion": "95"
   },
   {
     "legajo": 1004,
@@ -613,7 +613,7 @@
   {
     "legajo": 1017,
     "materia": "Educación Física",
-    "calificacion": ""
+    "calificacion": "80"
   },
   {
     "legajo": 1017,
@@ -628,6 +628,671 @@
   {
     "legajo": 1017,
     "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1019,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1020,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1021,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1022,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1023,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1024,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1025,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1026,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Educación Física",
+    "calificacion": "20"
+  },
+  {
+    "legajo": 1027,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1027,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1028,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1029,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1030,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1031,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Inglés",
+    "calificacion": "55"
+  },
+  {
+    "legajo": 1032,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1032,
+    "materia": "Educación Cívica",
+    "calificacion": "55"
+  },
+  {
+    "legajo": 1033,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Educación Cívica",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1033,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Educación Física",
+    "calificacion": "45"
+  },
+  {
+    "legajo": 1034,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1034,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Química",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Geografía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1035,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Matemática",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Lengua",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Historia",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1036,
+    "materia": "Biología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Inglés",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Filosofía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Educación Física",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Economía",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Arte",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Sociología",
+    "calificacion": ""
+  },
+  {
+    "legajo": 1037,
+    "materia": "Educación Cívica",
     "calificacion": ""
   }
 ]
