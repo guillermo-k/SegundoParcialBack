@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const cursos = require("../database/cursos.json")
-const alumnos = require("../database/alumnos.json");
-const usuarios = require("../database/usuarios.json")
-const calificacionesJSON = require("../database/calificaciones.json")
+let alumnos = require("../database/alumnos.json");
+let alumnos2 = require("../database/alumnos2.json");
+let usuarios = require("../database/usuarios.json")
+let calificacionesJSON = require("../database/calificaciones.json")
 const calificacionesController = require("./calificacionesController");
 
 const calificaciones = new calificacionesController
@@ -11,22 +12,6 @@ const calificaciones = new calificacionesController
 
 class alumnosController {
 
-  // borrarMaterias(){
-  //   console.log(alumnos)
-  //   alumnos.forEach(alumno=>{
-  //     alumno.materias = [
-  //       "Lengua",
-  //       "Matemática",
-  //       "Historia",
-  //       "Gimnasia",
-  //       "Geografía",
-  //       "Química",
-  //       "Inglés"
-  //     ]
-  //   })
-  //   const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
-  //   fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
-  // }
 
   // Metodo para mostrar todos los alumnos
   mostrar() {
@@ -111,7 +96,7 @@ class alumnosController {
         fs.writeFileSync(filePathUsuario, JSON.stringify(usuarios, null, 2), "utf-8");
 
         return newBody;
-      }
+      }else{console.log("Fallo: "+nombre)}
 
     } catch (error) {
       throw error;
@@ -120,19 +105,19 @@ class alumnosController {
   }
   borrar(legajo) {
     try {
-
       // Borrado del alumno de alumnos.JSON
       const newAlumnos = alumnos.filter(it => it.legajo != legajo)
       if(newAlumnos.length != alumnos.length){
+        alumnos=newAlumnos
         const filePathAlumnos = path.join(__dirname, "../database/alumnos.json");
         fs.writeFileSync(filePathAlumnos, JSON.stringify(newAlumnos, null, 2), "utf-8");
 
 
 
         // Borrado del usuario de usuarios.JSON
-        const newUsuarios = usuarios.filter(it => it.legajo != legajo)
+        usuarios = usuarios.filter(it => it.legajo != legajo)
         const filePathUsuarios = path.join(__dirname, "../database/usuarios.json");
-        fs.writeFileSync(filePathUsuarios, JSON.stringify(newUsuarios, null, 2), "utf-8");
+        fs.writeFileSync(filePathUsuarios, JSON.stringify(usuarios, null, 2), "utf-8");
 
         // Borrado de las calificaciones del alumno
         calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo)
@@ -147,6 +132,36 @@ class alumnosController {
 
     }
   }
+
+
+  ////////////////// Metodos usados en desarrollo
+
+  // algo(){
+  //   alumnos2.forEach(a=>{
+  //   let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  //   a.contraseña = Array.from({ length: 4 }, () => caracteres[Math.floor(Math.random() * caracteres.length)]).join('');
+  //   let alumno = {"nombre": a.nombre, "curso": a.curso, "padre_madre": a.padre_madre, "contraseña": a.contraseña} 
+  //     this.agregar(alumno)})
+  // }
+
+
+  // borrarMaterias(){
+  //   console.log(alumnos)
+  //   alumnos.forEach(alumno=>{
+  //     alumno.materias = [
+  //       "Lengua",
+  //       "Matemática",
+  //       "Historia",
+  //       "Gimnasia",
+  //       "Geografía",
+  //       "Química",
+  //       "Inglés"
+  //     ]
+  //   })
+  //   const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
+  //   fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
+  // }
+
 };
 
 module.exports = alumnosController
