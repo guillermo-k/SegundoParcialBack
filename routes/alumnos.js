@@ -1,37 +1,27 @@
 var express = require("express");
 var router = express.Router();
-const alumnosController = require("../controllers/alumnosController")
-const Alumnos = new alumnosController
-
+const alumnosController = require("../controllers/alumnosController");
+const Alumnos = new alumnosController();
 
 //////////////////////////////////////Rutas//////////////////////////////////////
 
-// router.get("/borrar/materias",(req,res)=>{
-//   Alumnos.borrarMaterias()
-// })
-
-router.get("/algo",(req,res)=>{
-    Alumnos.algo()
-    res.send("ando")
-})
-
-
 // Borrado de un alumno por legajo
 router.delete("/:legajo", async (req, res) => {
-  const {legajo} = req.params;
+  const { legajo } = req.params;
   const respuesta = await Alumnos.borrar(legajo);
-  respuesta? res.status(200).render("exito",{mensaje: respuesta, url:"/alumnos/"}): res.status(400).render("error",{mensaje:"Alumno no encontrado"})
+  respuesta
+    ? res.status(200).render("exito", { mensaje: respuesta, url: "/alumnos/" })
+    : res.status(400).render("error", { mensaje: "Alumno no encontrado" });
 });
 
-
-/* Agrega un alumno */
+/* Agrega un alumno (ingreso administrador) */
 router.get("/agregar", (req, res) => {
   res.render("agregar_alumno");
 });
 
-/* Muestra lista de alumnos o alumno en particular si se le pasa su legajo */
+/* Muestra lista de alumnos o alumno en particular según si se le pasa legajo por parámetro */
 router.get("/:legajo?", async (req, res) => {
-  const {legajo} = req.params
+  const { legajo } = req.params;
 
   const respuesta = legajo ? await Alumnos.mostrarPorLegajo(legajo) : await Alumnos.mostrar();
   if (respuesta) {
@@ -48,6 +38,15 @@ router.post("/", async (req, res) => {
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });
 
+//////////////////////Rutas auxiliares para uso en desarrollo//////////////////////
 
+// router.get("/borrar/materias",(req,res)=>{
+//   Alumnos.borrarMaterias()
+// })
+
+/* router.get("/cargaautomatica", (req, res) => {
+  Alumnos.CargaAutomaticaAlumnos();
+  res.send("ando");
+}); */
 
 module.exports = router;

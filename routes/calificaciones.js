@@ -6,19 +6,25 @@ const alumnosController = require("../controllers/alumnosController");
 const calificaciones = new calificacionesController();
 const alumnos = new alumnosController();
 
+/* API que devuelve notas de un alumno según legajo */
 router.get("/api/:legajo", (req, res) => {
   const { legajo } = req.params;
   const calificacionesAlumno = calificaciones.obtenerCalificacionesPorLegajo(legajo);
-  res.send(calificacionesAlumno);
+  res.json(calificacionesAlumno);
 });
 
+/* Muestra los cursos en los que da clases el profesor, y sus materias, para cargar las calificaciones */
 router.get("/profesor/:legajo", (req, res) => {
   const { legajo } = req.params;
-  console.log("legajo en entrada", legajo)
+  console.log("legajo en entrada", legajo);
   const cursosDeProf = calificaciones.buscarCursosPorProfesor(parseInt(legajo));
-  res.render("seleccionCursoParaCalificaciones", { cursosDeProf: cursosDeProf, legajoProfe: String(legajo) });
+  res.render("seleccionCursoParaCalificaciones", {
+    cursosDeProf: cursosDeProf,
+    legajoProfe: String(legajo)
+  });
 });
 
+/* Formulario para carga de calificaciones */
 router.get("/form", (req, res) => {
   const { materia, curso, legajo } = req.query;
   const alumnosDelCurso = alumnos.mostrarPorCursoYMateria(curso, materia);
@@ -29,14 +35,18 @@ router.get("/form", (req, res) => {
   });
 });
 
+/* Ruta POST para guardado de calificaciones */
 router.post("/cargar", (req, res) => {
   const { legajo } = req.body;
-  console.log("req.body en último post", req.body)
+  console.log("req.body en último post", req.body);
   delete req.body.legajo;
   const calificacionesDelForm = req.body;
 
   calificaciones.cargarCalificacionesAlJSON(calificacionesDelForm);
-  res.render("exito", { mensaje: "Se guardó correctamente", url: `/calificaciones/profesor/${legajo}` });
+  res.render("exito", {
+    mensaje: "Se guardó correctamente",
+    url: `/calificaciones/profesor/${legajo}`
+  });
 });
 
 module.exports = router;

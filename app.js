@@ -3,25 +3,23 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-const methodOverride = require('method-override');
-
+const methodOverride = require("method-override");
 
 var app = express();
 
-/* **************IMPORTAR TODAS LAS RUTAS************ */
+/* **************IMPORTAR TODOS LOS ARCHIVOS DE RUTAS************ */
 const alumnos = require("./routes/alumnos");
 const calificaciones = require("./routes/calificaciones");
-const cursos = require("./routes/cursos");
 const usuarios = require("./routes/usuarios");
-const index = require("./routes/index")
-const login = require("./routes/login") 
+const index = require("./routes/index");
+const login = require("./routes/login");
 
-// CAMBIÉ EL MOTOR DE VISTAS DE JADE A PUG*********
+// CAMBIO DE MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 /* ******************************************* */
-/* middleware globales a todas las rutas */
+/* Middlewares globales a todas las rutas */
 
 // Habilitar parsing de JSON
 app.use(express.json());
@@ -29,21 +27,21 @@ app.use(express.json());
 // Habilitar parsing de datos de formularios
 app.use(express.urlencoded({ extended: true }));
 
-app.use(methodOverride('_method'));
+/* permite usar más métodos http en los Form */
+app.use(methodOverride("_method"));
 
 app.use(logger("dev"));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
 /* ******************************************* */
 
-/* app.use() se utiliza comúnmente para montar un router desde un archivo de rutas externo. */
+/* RUTAS */
 app.use("/", index);
 app.use("/alumnos", alumnos);
 app.use("/calificaciones", calificaciones);
-app.use("/cursos", cursos);
 app.use("/usuarios", usuarios);
 app.use("/login", login);
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
