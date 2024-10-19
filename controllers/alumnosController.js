@@ -9,24 +9,6 @@ const calificacionesController = require("./calificacionesController");
 const calificaciones = new calificacionesController();
 
 class alumnosController {
-  /* ///////////método auxiliar de uso en desarrollo///////////
-  CargaAutomaticaAlumnos() {
-    alumnos2.forEach(a => {
-      let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      a.contraseña = Array.from(
-        { length: 4 },
-        () => caracteres[Math.floor(Math.random() * caracteres.length)]
-      ).join("");
-      let alumno = {
-        nombre: a.nombre,
-        curso: a.curso,
-        padre_madre: a.padre_madre,
-        contraseña: a.contraseña
-      };
-      this.agregar(alumno);
-    });
-  } */
-
   // Método para mostrar todos los alumnos
   mostrar() {
     try {
@@ -140,7 +122,24 @@ class alumnosController {
     }
   }
 
-  ////////////////// Métodos usados en desarrollo
+  /* /////////// Métodos auxiliares de uso en desarrollo///////////
+
+  CargaAutomaticaAlumnos() {
+    alumnos2.forEach(a => {
+      let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      a.contraseña = Array.from(
+        { length: 4 },
+        () => caracteres[Math.floor(Math.random() * caracteres.length)]
+      ).join("");
+      let alumno = {
+        nombre: a.nombre,
+        curso: a.curso,
+        padre_madre: a.padre_madre,
+        contraseña: a.contraseña
+      };
+      this.agregar(alumno);
+    });
+  } */
 
   // borrarMaterias(){
   //   console.log(alumnos)
