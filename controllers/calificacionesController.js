@@ -12,10 +12,6 @@ class calificacionesController {
       throw error;
     }
   }
-  /// Por ahora en desuso
-  obtenerCalificacionesPorMateria(materia) {
-    return calificaciones.filter(it => it.materia == materia);
-  }
 
   buscarCursosPorProfesor(legajo) {
     const cursosDeProf = cursos.filter(it => it.profesores.includes(legajo));
@@ -39,6 +35,11 @@ class calificacionesController {
     const filePath = path.join(__dirname, "../database/calificaciones.json");
     fs.writeFileSync(filePath, JSON.stringify(calificaciones, null, 2), "utf-8");
   }
+
+  /// Por ahora en desuso
+  /* obtenerCalificacionesPorMateria(materia) {
+    return calificaciones.filter(it => it.materia == materia);
+  } */
 }
 
 module.exports = calificacionesController;

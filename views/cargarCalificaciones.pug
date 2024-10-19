@@ -10,8 +10,10 @@ block header
         padding: 8px;
         text-align: left;
       }
+    
 block content
     h1= materia
+    h2= curso
     form(action="/calificaciones/cargar", method="POST")
         input(type="hidden", name="materia",value=materia)
         input(type="hidden", name="legajo", value=legajo)

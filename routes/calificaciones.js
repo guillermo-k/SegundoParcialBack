@@ -16,7 +16,6 @@ router.get("/api/:legajo", (req, res) => {
 /* Muestra los cursos en los que da clases el profesor, y sus materias, para cargar las calificaciones */
 router.get("/profesor/:legajo", (req, res) => {
   const { legajo } = req.params;
-  console.log("legajo en entrada", legajo);
   const cursosDeProf = calificaciones.buscarCursosPorProfesor(parseInt(legajo));
   res.render("seleccionCursoParaCalificaciones", {
     cursosDeProf: cursosDeProf,
@@ -31,14 +30,14 @@ router.get("/form", (req, res) => {
   res.render("cargarCalificaciones", {
     alumnos: alumnosDelCurso,
     materia: materia,
-    legajo: legajo
+    legajo: legajo,
+    curso: curso
   });
 });
 
 /* Ruta POST para guardado de calificaciones */
 router.post("/cargar", (req, res) => {
   const { legajo } = req.body;
-  console.log("req.body en último post", req.body);
   delete req.body.legajo;
   const calificacionesDelForm = req.body;
 

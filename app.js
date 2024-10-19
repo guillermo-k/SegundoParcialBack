@@ -12,7 +12,7 @@ const alumnos = require("./routes/alumnos");
 const calificaciones = require("./routes/calificaciones");
 const usuarios = require("./routes/usuarios");
 const index = require("./routes/index");
-const login = require("./routes/login");
+
 
 // CAMBIO DE MOTOR DE VISTAS DE JADE A PUG*********
 app.set("views", path.join(__dirname, "views"));
@@ -27,7 +27,7 @@ app.use(express.json());
 // Habilitar parsing de datos de formularios
 app.use(express.urlencoded({ extended: true }));
 
-/* permite usar más métodos http en los Form */
+/* permite usar más métodos http en los Forms */
 app.use(methodOverride("_method"));
 
 app.use(logger("dev"));
@@ -41,7 +41,7 @@ app.use("/", index);
 app.use("/alumnos", alumnos);
 app.use("/calificaciones", calificaciones);
 app.use("/usuarios", usuarios);
-app.use("/login", login);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

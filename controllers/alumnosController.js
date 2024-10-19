@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const cursos = require("../database/cursos.json");
 let alumnos = require("../database/alumnos.json");
-let alumnos2 = require("../database/alumnos2.json");
+/* let alumnos2 = require("../database/alumnos2.json"); */
 let usuarios = require("../database/usuarios.json");
 let calificacionesJSON = require("../database/calificaciones.json");
 const calificacionesController = require("./calificacionesController");
@@ -122,7 +122,7 @@ class alumnosController {
     }
   }
 
-  /* /////////// Métodos auxiliares de uso en desarrollo///////////
+  /* /////////// Método auxiliar de uso en desarrollo///////////
 
   CargaAutomaticaAlumnos() {
     alumnos2.forEach(a => {
@@ -141,22 +141,6 @@ class alumnosController {
     });
   } */
 
-  // borrarMaterias(){
-  //   console.log(alumnos)
-  //   alumnos.forEach(alumno=>{
-  //     alumno.materias = [
-  //       "Lengua",
-  //       "Matemática",
-  //       "Historia",
-  //       "Gimnasia",
-  //       "Geografía",
-  //       "Química",
-  //       "Inglés"
-  //     ]
-  //   })
-  //   const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
-  //   fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
-  // }
 }
 
 module.exports = alumnosController;

@@ -13,7 +13,7 @@
   {
     "legajo": 1000,
     "materia": "Filosofía",
-    "calificacion": ""
+    "calificacion": "15"
   },
   {
     "legajo": 1000,
@@ -48,7 +48,7 @@
   {
     "legajo": 1001,
     "materia": "Filosofía",
-    "calificacion": ""
+    "calificacion": "15"
   },
   {
     "legajo": 1001,
@@ -118,7 +118,7 @@
   {
     "legajo": 1003,
     "materia": "Filosofía",
-    "calificacion": ""
+    "calificacion": "15"
   },
   {
     "legajo": 1003,
@@ -1098,7 +1098,7 @@
   {
     "legajo": 1032,
     "materia": "Filosofía",
-    "calificacion": ""
+    "calificacion": "15"
   },
   {
     "legajo": 1032,

@@ -1,9 +1,20 @@
 [
   {
+    "legajo": 1000,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
+  },
+  {
     "legajo": 395,
-    "contraseña": "QasjBGo8",
+    "contraseña": "1234",
     "rol": "profesor"
   },
+  {
+    "legajo": 84,
+    "contraseña": "1234",
+    "rol": "administrador"
+  },
+
   {
     "legajo": 845,
     "contraseña": "O8G7xKLp",
@@ -86,7 +97,7 @@
   },
   {
     "legajo": 108,
-    "contraseña": "s05fhaad",
+    "contraseña": "1234",
     "rol": "profesor"
   },
   {
@@ -119,16 +130,7 @@
     "contraseña": "roTJ6RtM",
     "rol": "administrador"
   },
-  {
-    "legajo": 84,
-    "contraseña": "pCdD7kKE",
-    "rol": "administrador"
-  },
-  {
-    "legajo": 1000,
-    "contraseña": "u9AN",
-    "rol": "alumno/padre"
-  },
+  
   {
     "legajo": 1001,
     "contraseña": "uZnX",
