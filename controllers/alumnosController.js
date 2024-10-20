@@ -1,20 +1,19 @@
 const fs = require("fs");
 const path = require("path");
-const cursos = require("../database/cursos.json");
+const Usuarios = require("./usuariosController");
+const Calificaciones = require("./calificacionesController");
+const Cursos = require("./cursosController")
+
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
-let usuarios = require("../database/usuarios.json");
-let calificacionesJSON = require("../database/calificaciones.json");
-const calificacionesController = require("./calificacionesController");
-const calificaciones = new calificacionesController();
 
 class alumnosController {
   // Método para mostrar todos los alumnos
-  mostrar() {
+  static mostrar() {
     try {
       const alumnos2 = JSON.parse(JSON.stringify(alumnos));
       alumnos2.map(element => {
-        element.materias = calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+        element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
       });
       return alumnos2;
     } catch (error) {
@@ -23,11 +22,11 @@ class alumnosController {
   }
 
   // Método que muestra un solo alumno, búsqueda por legajo
-  mostrarPorLegajo(legajo) {
+  static mostrarPorLegajo(legajo) {
     try {
       const alumno = alumnos.find(alumno => alumno.legajo == legajo);
       if (alumno) {
-        alumno.materias = calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
+        alumno.materias = Calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
         return alumno;
       }
     } catch (error) {
@@ -36,11 +35,11 @@ class alumnosController {
   }
 
   // Método para mostrar un alumno por su curso
-  mostrarPorCursoYMateria(curso, materia) {
+  static mostrarPorCursoYMateria(curso, materia) {
     try {
       const alumnosCurso = alumnos.filter(alumno => alumno.curso == curso);
       alumnosCurso.map(element => {
-        element.materias = calificaciones
+        element.materias = Calificaciones
           .obtenerCalificacionesPorLegajo(element.legajo)
           .filter(element => element.materia == materia);
       });
@@ -51,7 +50,7 @@ class alumnosController {
   }
 
   // Método para agregar un nuevo alumno
-  agregar(body) {
+  static agregar(body) {
     try {
       const { nombre, curso, padre_madre, contraseña } = body;
 
@@ -59,59 +58,40 @@ class alumnosController {
         ////Generación de número de legajo
         const legajo = Math.max(...alumnos.map(alumno => alumno.legajo)) + 1;
 
-        const materias = cursos.find(item => item.curso == curso).materias;
+        const materias = Cursos.buscarMateriasPorCurso(curso)
 
         const newBody = { nombre, curso, materias, padre_madre, legajo };
 
         alumnos.push(newBody);
 
         // Guardar los cambios en el archivo JSON alumnos
-        const filePathAlumno = path.join(__dirname, "../database/alumnos.json");
-        fs.writeFileSync(filePathAlumno, JSON.stringify(alumnos, null, 2), "utf-8");
+        this.actualizarJson(alumnos)
 
         // Guardar datos de calificaciones vacías del alumno
-        const filePathCalificaciones = path.join(__dirname, "../database/calificaciones.json");
-        materias.map(materia => {
-          calificacionesJSON.push({
-            legajo: legajo,
-            materia: materia,
-            calificacion: ""
-          });
-        });
-        fs.writeFileSync(
-          filePathCalificaciones,
-          JSON.stringify(calificacionesJSON, null, 2),
-          "utf-8"
-        );
+        Calificaciones.crearCalificacionesVacias({"materias":materias, "legajo":legajo})
 
         // Guarda un nuevo usuario en usuarios.JSON
         const newUsuario = { legajo, contraseña, rol: "alumno/padre" };
-        usuarios.push(newUsuario);
-        const filePathUsuario = path.join(__dirname, "../database/usuarios.json");
-        fs.writeFileSync(filePathUsuario, JSON.stringify(usuarios, null, 2), "utf-8");
-
+        Usuarios.agregarUsuario(newUsuario)
         return newBody;
       }
     } catch (error) {
       throw error;
     }
   }
-  borrar(legajo) {
+  static borrar(legajo) {
     try {
       // Borrado del alumno de alumnos.JSON
       const newAlumnos = alumnos.filter(it => it.legajo != legajo);
       if (newAlumnos.length != alumnos.length) {
         alumnos = newAlumnos;
-        const filePathAlumnos = path.join(__dirname, "../database/alumnos.json");
-        fs.writeFileSync(filePathAlumnos, JSON.stringify(newAlumnos, null, 2), "utf-8");
+        this.actualizarJson(newAlumnos)
 
         // Borrado del usuario de usuarios.JSON
-        usuarios = usuarios.filter(it => it.legajo != legajo);
-        const filePathUsuarios = path.join(__dirname, "../database/usuarios.json");
-        fs.writeFileSync(filePathUsuarios, JSON.stringify(usuarios, null, 2), "utf-8");
+        Usuarios.borrarUsuario(legajo)
 
         // Borrado de las calificaciones del alumno
-        calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo);
+        Calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo);
 
         return `El alumno con legajo N° ${legajo} ha sido eliminado correctamente de la base de datos.`;
       } else {
@@ -120,6 +100,13 @@ class alumnosController {
     } catch (error) {
       throw error;
     }
+
+  }
+  
+  
+  static actualizarJson(datos){
+    const filePathAlumnos = path.join(__dirname, "../database/alumnos.json");
+    fs.writeFileSync(filePathAlumnos, JSON.stringify(datos, null, 2), "utf-8");
   }
 
   /* /////////// Método auxiliar de uso en desarrollo///////////

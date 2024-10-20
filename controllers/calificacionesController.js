@@ -2,10 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 let calificaciones = require("../database/calificaciones.json");
-const cursos = require("../database/cursos.json");
 
 class calificacionesController {
-  obtenerCalificacionesPorLegajo(legajo) {
+
+  
+  static obtenerCalificacionesPorLegajo(legajo) {
     try {
       return calificaciones.filter(it => it.legajo == legajo);
     } catch (error) {
@@ -13,12 +14,8 @@ class calificacionesController {
     }
   }
 
-  buscarCursosPorProfesor(legajo) {
-    const cursosDeProf = cursos.filter(it => it.profesores.includes(legajo));
-    return cursosDeProf;
-  }
 
-  cargarCalificacionesAlJSON(datosAlumno) {
+  static cargarCalificacionesAlJSON(datosAlumno) {
     const materia = datosAlumno.materia;
     delete datosAlumno.materia;
     for (const [legajo, calificacion] of Object.entries(datosAlumno)) {
@@ -26,14 +23,28 @@ class calificacionesController {
         calificacion;
     }
 
-    const filePath = path.join(__dirname, "../database/calificaciones.json");
-    fs.writeFileSync(filePath, JSON.stringify(calificaciones, null, 2), "utf-8");
+    this.actualizarJson(calificaciones)
   }
 
-  borrarCalificacionesDeJsonPorLegajo(legajo) {
+  static borrarCalificacionesDeJsonPorLegajo(legajo) {
     calificaciones = calificaciones.filter(it => it.legajo != legajo);
+    this.actualizarJson(calificaciones)
+  }
+
+  static crearCalificacionesVacias(datos){
+    datos.materias.forEach(materia => {
+      calificaciones.push({
+        "legajo": datos.legajo,
+        "materia": materia,
+        "calificacion": ""
+      })
+    });
+    this.actualizarJson(calificaciones)
+  }
+
+  static actualizarJson(datos){
     const filePath = path.join(__dirname, "../database/calificaciones.json");
-    fs.writeFileSync(filePath, JSON.stringify(calificaciones, null, 2), "utf-8");
+    fs.writeFileSync(filePath, JSON.stringify(datos, null, 2), "utf-8");
   }
 
   /// Por ahora en desuso

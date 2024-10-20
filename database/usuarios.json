@@ -14,7 +14,6 @@
     "contraseña": "1234",
     "rol": "administrador"
   },
-
   {
     "legajo": 845,
     "contraseña": "O8G7xKLp",
@@ -130,7 +129,6 @@
     "contraseña": "roTJ6RtM",
     "rol": "administrador"
   },
-  
   {
     "legajo": 1001,
     "contraseña": "uZnX",
@@ -302,13 +300,13 @@
     "rol": "alumno/padre"
   },
   {
-    "legajo": 1036,
-    "contraseña": "i9CK",
+    "legajo": 1039,
+    "contraseña": "roberto",
     "rol": "alumno/padre"
   },
   {
-    "legajo": 1037,
-    "contraseña": "Nvju",
+    "legajo": 1036,
+    "contraseña": "qwerty",
     "rol": "alumno/padre"
   }
 ]

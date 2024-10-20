@@ -3,13 +3,41 @@
     "nombre": "Diego Fernández",
     "curso": "2B",
     "materias": [
-      "Inglés",
-      "Educación Física",
-      "Filosofía",
-      "Arte",
-      "Sociología",
-      "Historia",
-      "Educación Cívica"
+      {
+        "legajo": 1000,
+        "materia": "Inglés",
+        "calificacion": "50"
+      },
+      {
+        "legajo": 1000,
+        "materia": "Educación Física",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1000,
+        "materia": "Filosofía",
+        "calificacion": "15"
+      },
+      {
+        "legajo": 1000,
+        "materia": "Arte",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1000,
+        "materia": "Sociología",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1000,
+        "materia": "Historia",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1000,
+        "materia": "Educación Cívica",
+        "calificacion": "50"
+      }
     ],
     "padre_madre": "Roberto Fernández",
     "legajo": 1000
@@ -33,13 +61,11 @@
     "nombre": "Gonzalo Romero",
     "curso": "3A",
     "materias": [
-      "Matemática",
-      "Biología",
-      "Física",
-      "Educación Cívica",
-      "Arte",
-      "Geografía",
-      "Inglés"
+      {
+        "legajo": 1002,
+        "materia": "Matemática",
+        "calificacion": "35"
+      }
     ],
     "padre_madre": "Luciana Romero",
     "legajo": 1002
@@ -288,13 +314,11 @@
     "nombre": "Sofía López",
     "curso": "3A",
     "materias": [
-      "Matemática",
-      "Biología",
-      "Física",
-      "Educación Cívica",
-      "Arte",
-      "Geografía",
-      "Inglés"
+      {
+        "legajo": 1020,
+        "materia": "Matemática",
+        "calificacion": "40"
+      }
     ],
     "padre_madre": "Carlos López",
     "legajo": 1020
@@ -483,13 +507,11 @@
     "nombre": "Catalina Paredes",
     "curso": "3A",
     "materias": [
-      "Matemática",
-      "Biología",
-      "Física",
-      "Educación Cívica",
-      "Arte",
-      "Geografía",
-      "Inglés"
+      {
+        "legajo": 1033,
+        "materia": "Matemática",
+        "calificacion": "45"
+      }
     ],
     "padre_madre": "Luciana Paredes",
     "legajo": 1033
@@ -513,45 +535,58 @@
     "nombre": "Florencia Sosa",
     "curso": "4B",
     "materias": [
-      "Inglés",
-      "Matemática",
-      "Educación Física",
-      "Química",
-      "Geografía",
-      "Historia",
-      "Lengua"
+      {
+        "legajo": 1035,
+        "materia": "Inglés",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Matemática",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Educación Física",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Química",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Geografía",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Historia",
+        "calificacion": ""
+      },
+      {
+        "legajo": 1035,
+        "materia": "Lengua",
+        "calificacion": ""
+      }
     ],
     "padre_madre": "Juan Sosa",
     "legajo": 1035
   },
   {
-    "nombre": "Joaquín Díaz",
-    "curso": "5A",
+    "nombre": "Roberto López",
+    "curso": "1A",
     "materias": [
-      "Arte",
-      "Física",
-      "Economía",
       "Matemática",
       "Lengua",
-      "Historia",
-      "Biología"
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
     ],
-    "padre_madre": "Sandra Díaz",
+    "padre_madre": "Carlos López",
     "legajo": 1036
-  },
-  {
-    "nombre": "Brenda Castro",
-    "curso": "1B",
-    "materias": [
-      "Inglés",
-      "Filosofía",
-      "Educación Física",
-      "Economía",
-      "Arte",
-      "Sociología",
-      "Educación Cívica"
-    ],
-    "padre_madre": "Gustavo Castro",
-    "legajo": 1037
   }
 ]
