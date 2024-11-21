@@ -3,18 +3,20 @@ const path = require("path");
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
 const Cursos = require("./cursosController")
+const Alumnos = require("../models/alumno")
 
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
 
 class alumnosController {
   // Método para mostrar todos los alumnos
-  static mostrar() {
+  static async mostrar() {
     try {
-      const alumnos2 = JSON.parse(JSON.stringify(alumnos));
-      alumnos2.map(element => {
-        element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
-      });
+      // const alumnos2 = JSON.parse(JSON.stringify(alumnos));
+      const alumnos2 = await Alumnos.find();
+      // alumnos2.map(element => {
+      //   element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+      // });
       return alumnos2;
     } catch (error) {
       throw error;
