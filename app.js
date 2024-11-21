@@ -5,7 +5,10 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const methodOverride = require("method-override");
 
+
 var app = express();
+const connectDB = require("./db")
+connectDB;
 
 /* **************IMPORTAR TODOS LOS ARCHIVOS DE RUTAS************ */
 const alumnos = require("./routes/alumnos");

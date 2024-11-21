@@ -5,7 +5,7 @@ const connectDB = async () => { // Define una función asíncrona para conectar 
   console.log("+++++++++++++++++++++++++++")
   try {
     // Intenta conectarse a MongoDB en la URL especificada.
-    const url = "mongodb+srv://admin:1234@cluster0.qchhf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    const url = "mongodb+srv://admin:1234@cluster0.qchhf.mongodb.net/Escuela?retryWrites=true&w=majority&appName=Cluster0"
     await mongoose.connect(url);
     console.log('Conectado a MongoDB'); // Imprime un mensaje si la conexión es exitosa.
   } catch (err) {
@@ -14,4 +14,4 @@ const connectDB = async () => { // Define una función asíncrona para conectar 
   }
 };
 
-module.exports = connectDB; // Exporta la función para que pueda ser utilizada en otros módulos.
+module.exports = connectDB(); // Exporta la función para que pueda ser utilizada en otros módulos.

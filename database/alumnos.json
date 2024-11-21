@@ -588,5 +588,65 @@
     ],
     "padre_madre": "Carlos López",
     "legajo": 1036
+  },
+  {
+    "nombre": "Homeros Simpson",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "Abraham Simpson",
+    "legajo": 1037
+  },
+  {
+    "nombre": "pepito2",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "Carlos López",
+    "legajo": 1038
+  },
+  {
+    "nombre": "Roberto López",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "pepa2",
+    "legajo": 1039
+  },
+  {
+    "nombre": "Homero Simpson",
+    "curso": "1A",
+    "materias": [
+      "Matemática",
+      "Lengua",
+      "Biología",
+      "Química",
+      "Geografía",
+      "Física",
+      "Historia"
+    ],
+    "padre_madre": "Abraham Simpson",
+    "legajo": 1040
   }
 ]

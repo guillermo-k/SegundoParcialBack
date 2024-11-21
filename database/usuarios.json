@@ -308,5 +308,90 @@
     "legajo": 1036,
     "contraseña": "qwerty",
     "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1037,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1038,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1039,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "legajo": 1040,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]1",
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]1",
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": "[object Object]1",
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1041,
+    "contraseña": "123",
+    "rol": "alumno/padre"
+  },
+  {
+    "nuevoLegajo": 1042,
+    "contraseña": "1234",
+    "rol": "alumno/padre"
   }
 ]

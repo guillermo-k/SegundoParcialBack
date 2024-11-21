@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
-const Cursos = require("./cursosController")
-const Alumno = require("../models/alumno")
+const Cursos = require("./cursosController");
+const Alumno = require("../models/Alumno")
 
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
@@ -14,9 +14,9 @@ class alumnosController {
     try {
       // const alumnos2 = JSON.parse(JSON.stringify(alumnos));
       const alumnos2 = await Alumno.find();
-      // alumnos2.map(element => {
-      //   element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
-      // });
+      alumnos2.map(element => {
+        element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+      });
       return alumnos2;
     } catch (error) {
       throw error;
@@ -24,9 +24,9 @@ class alumnosController {
   }
 
   // Método que muestra un solo alumno, búsqueda por legajo
-  static mostrarPorLegajo(legajo) {
+  static async mostrarPorLegajo(legajo) {
     try {
-      const alumno = alumnos.find(alumno => alumno.legajo == legajo);
+      const alumno = await Alumno.findOne({legajo:legajo});
       if (alumno) {
         alumno.materias = Calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
         return alumno;
@@ -37,9 +37,9 @@ class alumnosController {
   }
 
   // Método para mostrar un alumno por su curso
-  static mostrarPorCursoYMateria(curso, materia) {
+  static async mostrarPorCursoYMateria(curso, materia) {
     try {
-      const alumnosCurso = alumnos.filter(alumno => alumno.curso == curso);
+      const alumnosCurso = await Alumno.find({curso:curso})
       alumnosCurso.map(element => {
         element.materias = Calificaciones
           .obtenerCalificacionesPorLegajo(element.legajo)
@@ -58,25 +58,22 @@ class alumnosController {
 
       if (nombre && curso && padre_madre && contraseña) {
         ////Generación de número de legajo
-        const legajo = Math.max(...alumnos.map(alumno => alumno.legajo)) + 1;
+        const ultimoLegajo = await Alumno.findOne().sort({legajo: -1 });
+        const legajo = ultimoLegajo ? ultimoLegajo.legajo + 1 : 1000;
 
         const materias = Cursos.buscarMateriasPorCurso(curso)
 
-        const newBody = { nombre, curso, materias, padre_madre, legajo };
+        const newBody = { nombre, curso, materias, padre_madre, legajo: legajo };
 
         alumnos.push(newBody);
         const nuevoAlumno = new Alumno(newBody);
-        console.log("111121212")
         const savedAlumno = await nuevoAlumno.save();
-        console.log("222222222222222333")
-        // Guardar los cambios en el archivo JSON alumnos
-        this.actualizarJson(alumnos)
 
         // Guardar datos de calificaciones vacías del alumno
         Calificaciones.crearCalificacionesVacias({"materias":materias, "legajo":legajo})
 
         // Guarda un nuevo usuario en usuarios.JSON
-        const newUsuario = { legajo, contraseña, rol: "alumno/padre" };
+        const newUsuario = { nuevoLegajo: legajo, contraseña, rol: "alumno/padre" };
         Usuarios.agregarUsuario(newUsuario)
         return newBody;
       }
@@ -84,13 +81,12 @@ class alumnosController {
       throw error;
     }
   }
-  static borrar(legajo) {
+  static async borrar(legajo) {
     try {
       // Borrado del alumno de alumnos.JSON
-      const newAlumnos = alumnos.filter(it => it.legajo != legajo);
-      if (newAlumnos.length != alumnos.length) {
-        alumnos = newAlumnos;
-        this.actualizarJson(newAlumnos)
+      const alumnoBorrado = await Alumno.findOneAndDelete({legajo:legajo})
+      if (alumnoBorrado) {
+        
 
         // Borrado del usuario de usuarios.JSON
         Usuarios.borrarUsuario(legajo)
@@ -98,7 +94,7 @@ class alumnosController {
         // Borrado de las calificaciones del alumno
         Calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo);
 
-        return `El alumno con legajo N° ${legajo} ha sido eliminado correctamente de la base de datos.`;
+        return `El alumno ${alumnoBorrado.nombre} ha sido eliminado correctamente de la base de datos.`;
       } else {
         return;
       }
@@ -109,10 +105,7 @@ class alumnosController {
   }
   
   
-  static actualizarJson(datos){
-    const filePathAlumnos = path.join(__dirname, "../database/alumnos.json");
-    fs.writeFileSync(filePathAlumnos, JSON.stringify(datos, null, 2), "utf-8");
-  }
+  
 
   /* /////////// Método auxiliar de uso en desarrollo///////////
 

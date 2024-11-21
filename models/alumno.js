@@ -1,4 +1,6 @@
 const mongoose = require('mongoose'); 
+const db = mongoose.connection.useDb("Escuela")
+
 
 
 const alumnoSchema = new mongoose.Schema({
@@ -9,6 +11,7 @@ const alumnoSchema = new mongoose.Schema({
     legajo : {type: Number ,require : true}
 })
 
+// const Alumno = db.model("Alumno",alumnoSchema);
 const Alumno = mongoose.model("Alumno",alumnoSchema);
 
 module.exports = Alumno;
