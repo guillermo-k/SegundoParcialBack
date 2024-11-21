@@ -3,7 +3,7 @@ const path = require("path");
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
 const Cursos = require("./cursosController")
-const Alumnos = require("../models/alumno")
+const Alumno = require("../models/alumno")
 
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
@@ -13,7 +13,7 @@ class alumnosController {
   static async mostrar() {
     try {
       // const alumnos2 = JSON.parse(JSON.stringify(alumnos));
-      const alumnos2 = await Alumnos.find();
+      const alumnos2 = await Alumno.find();
       // alumnos2.map(element => {
       //   element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
       // });
@@ -52,7 +52,7 @@ class alumnosController {
   }
 
   // Método para agregar un nuevo alumno
-  static agregar(body) {
+  static async agregar(body) {
     try {
       const { nombre, curso, padre_madre, contraseña } = body;
 
@@ -65,7 +65,10 @@ class alumnosController {
         const newBody = { nombre, curso, materias, padre_madre, legajo };
 
         alumnos.push(newBody);
-
+        const nuevoAlumno = new Alumno(newBody);
+        console.log("111121212")
+        const savedAlumno = await nuevoAlumno.save();
+        console.log("222222222222222333")
         // Guardar los cambios en el archivo JSON alumnos
         this.actualizarJson(alumnos)
 

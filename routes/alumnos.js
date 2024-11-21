@@ -28,7 +28,7 @@ router.get("/:legajo?", async (req, res) => {
   } else {
     res.status(400).render("error", { mensaje: "El legajo ingresado no existe" });
   }
-});
+}); 
 
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
 router.post("/", async (req, res) => {
@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
 //////////////////////Rutas auxiliares para uso en desarrollo//////////////////////
 
 // router.get("/borrar/materias",(req,res)=>{
-//   Alumnos.borrarMaterias()
+//   Alumnos.borrarMaterias() 
 // })
 
 /* router.get("/cargaautomatica", (req, res) => {

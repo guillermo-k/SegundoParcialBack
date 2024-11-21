@@ -2,9 +2,10 @@
 const mongoose = require('mongoose'); // Importa la biblioteca Mongoose para MongoDB.
 
 const connectDB = async () => { // Define una función asíncrona para conectar a la base de datos.
+  console.log("+++++++++++++++++++++++++++")
   try {
     // Intenta conectarse a MongoDB en la URL especificada.
-    const url = "mongodb+srv://<admin>:<1234>@escuelaitaliana.hg6qg.mongodb.net/?retryWrites=true&w=majority&appName=EscuelaItaliana"
+    const url = "mongodb+srv://admin:1234@cluster0.qchhf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     await mongoose.connect(url);
     console.log('Conectado a MongoDB'); // Imprime un mensaje si la conexión es exitosa.
   } catch (err) {
