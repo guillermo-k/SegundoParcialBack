@@ -1,5 +1,6 @@
-const fs = require("fs");
-const path = require("path");
+/* const fs = require("fs");
+const path = require("path"); */
+
 /* Controllers */
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
@@ -46,8 +47,9 @@ class alumnosController {
     }
   }
 
-  // Método para mostrar un alumno por su curso
-  static async mostrarPorCursoYMateria(curso, materia) {
+ /*  *********SE USA????*********** */
+  // Método para mostrar un alumno por su curso 
+/*   static async mostrarPorCursoYMateria(curso, materia) {
     try {
       const alumnosCurso = await Alumno.find({curso:curso})
       alumnosCurso.map(element => {
@@ -59,7 +61,9 @@ class alumnosController {
     } catch (error) {
       throw error;
     }
-  }
+  } */
+
+
 
   // Método para agregar un nuevo alumno
   static async agregar(body) {
@@ -71,7 +75,7 @@ class alumnosController {
         const ultimoLegajo = await Alumno.findOne().sort({legajo: -1 });
         const legajo = ultimoLegajo ? ultimoLegajo.legajo + 1 : 1000;
 
-        const materias = Cursos.buscarMateriasPorCurso(curso)
+        const materias = await Cursos.buscarMateriasPorCurso(curso)
 
         const newBody = { nombre, curso, materias, padre_madre, legajo: legajo };
 
