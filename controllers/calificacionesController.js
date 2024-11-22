@@ -1,14 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const Calificacion = require("../models/calificacion")
 
 let calificaciones = require("../database/calificaciones.json");
 
 class calificacionesController {
 
   
-  static obtenerCalificacionesPorLegajo(legajo) {
+  static async obtenerCalificacionesPorLegajo(legajo) {
     try {
-      return calificaciones.filter(it => it.legajo == legajo);
+      return await Calificacion.find({legajo:legajo})
     } catch (error) {
       throw error;
     }

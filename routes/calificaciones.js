@@ -6,9 +6,9 @@ const Cursos = require("../controllers/cursosController")
 
 
 /* API que devuelve notas de un alumno según legajo */
-router.get("/api/:legajo", (req, res) => {
+router.get("/api/:legajo", async (req, res) => {
   const { legajo } = req.params;
-  const calificacionesAlumno = Calificaciones.obtenerCalificacionesPorLegajo(legajo);
+  const calificacionesAlumno =  await Calificaciones.obtenerCalificacionesPorLegajo(legajo);
   res.json(calificacionesAlumno);
 });
 

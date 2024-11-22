@@ -1,34 +1,44 @@
 const fs = require("fs");
 const path = require("path");
+/* Controllers */
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
 const Cursos = require("./cursosController");
+
+/* Model Alumno */
 const Alumno = require("../models/Alumno")
 
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
 
 class alumnosController {
-  // Método para mostrar todos los alumnos
-  static async mostrar() {
-    try {
-      // const alumnos2 = JSON.parse(JSON.stringify(alumnos));
-      const alumnos2 = await Alumno.find();
-      alumnos2.map(element => {
-        element.materias = Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
-      });
-      return alumnos2;
-    } catch (error) {
-      throw error;
-    }
-  }
+
+      // Método para mostrar todos los alumnos
+      static async mostrar() {
+        try {
+          const alumnos = await Alumno.find();
+
+          const alumnosConCalificaciones = await Promise.all(
+            alumnos.map(async (element) => {
+              
+              element.materias = await Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+              return element; 
+            })
+          );
+         
+          return alumnosConCalificaciones; 
+        } catch (error) {
+          throw error; 
+        }
+      }
+
 
   // Método que muestra un solo alumno, búsqueda por legajo
   static async mostrarPorLegajo(legajo) {
     try {
       const alumno = await Alumno.findOne({legajo:legajo});
       if (alumno) {
-        alumno.materias = Calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
+        alumno.materias = await Calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
         return alumno;
       }
     } catch (error) {
