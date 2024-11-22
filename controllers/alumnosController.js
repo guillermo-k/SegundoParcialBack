@@ -7,37 +7,34 @@ const Calificaciones = require("./calificacionesController");
 const Cursos = require("./cursosController");
 
 /* Model Alumno */
-const Alumno = require("../models/Alumno")
+const Alumno = require("../models/Alumno");
 
 let alumnos = require("../database/alumnos.json");
 /* let alumnos2 = require("../database/alumnos2.json"); */
 
 class alumnosController {
+  // Método para mostrar todos los alumnos
+  static async mostrar() {
+    try {
+      const alumnos = await Alumno.find();
 
-      // Método para mostrar todos los alumnos
-      static async mostrar() {
-        try {
-          const alumnos = await Alumno.find();
+      const alumnosConCalificaciones = await Promise.all(
+        alumnos.map(async element => {
+          element.materias = await Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+          return element;
+        })
+      );
 
-          const alumnosConCalificaciones = await Promise.all(
-            alumnos.map(async (element) => {
-              
-              element.materias = await Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
-              return element; 
-            })
-          );
-         
-          return alumnosConCalificaciones; 
-        } catch (error) {
-          throw error; 
-        }
-      }
-
+      return alumnosConCalificaciones;
+    } catch (error) {
+      throw error;
+    }
+  }
 
   // Método que muestra un solo alumno, búsqueda por legajo
   static async mostrarPorLegajo(legajo) {
     try {
-      const alumno = await Alumno.findOne({legajo:legajo});
+      const alumno = await Alumno.findOne({ legajo: legajo });
       if (alumno) {
         alumno.materias = await Calificaciones.obtenerCalificacionesPorLegajo(alumno.legajo);
         return alumno;
@@ -47,23 +44,35 @@ class alumnosController {
     }
   }
 
- /*  *********SE USA????*********** */
-  // Método para mostrar un alumno por su curso 
-/*   static async mostrarPorCursoYMateria(curso, materia) {
+  /*  *********SE USA????*********** */
+  // Método para mostrar un alumno por su curso
+  static async mostrarPorCursoYMateria(curso, materia) {
     try {
-      const alumnosCurso = await Alumno.find({curso:curso})
-      alumnosCurso.map(element => {
-        element.materias = Calificaciones
-          .obtenerCalificacionesPorLegajo(element.legajo)
-          .filter(element => element.materia == materia);
-      });
-      return alumnosCurso;
+      const alumnos = await Alumno.find({ curso: curso });
+      const alumnosCurso = await Promise.all(
+        alumnos.map(async element => {
+          element.materias =  await Calificaciones.buscarCalificacionLegajoMateria(
+            element.legajo,
+            materia
+          );
+          console.log("materias dentro del map", element.materias)
+        })
+      );
+
+      /* const alumnosConCalificaciones = await Promise.all(
+        alumnos.map(async (element) => {
+          
+          element.materias = await Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
+          return element; 
+        })
+      ); */
+/* console.log("try, alumnos", alumnos)
+console.log("try, alumnosCurso", alumnosCurso) */
+      return alumnos;
     } catch (error) {
       throw error;
     }
-  } */
-
-
+  }
 
   // Método para agregar un nuevo alumno
   static async agregar(body) {
@@ -72,23 +81,23 @@ class alumnosController {
 
       if (nombre && curso && padre_madre && contraseña) {
         ////Generación de número de legajo
-        const ultimoLegajo = await Alumno.findOne().sort({legajo: -1 });
+        const ultimoLegajo = await Alumno.findOne().sort({ legajo: -1 });
         const legajo = ultimoLegajo ? ultimoLegajo.legajo + 1 : 1000;
 
-        const materias = await Cursos.buscarMateriasPorCurso(curso)
+        const materias = await Cursos.buscarMateriasPorCurso(curso);
 
         const newBody = { nombre, curso, materias, padre_madre, legajo: legajo };
 
-        alumnos.push(newBody);
+        /* alumnos.push(newBody); */
         const nuevoAlumno = new Alumno(newBody);
         const savedAlumno = await nuevoAlumno.save();
 
         // Guardar datos de calificaciones vacías del alumno
-        Calificaciones.crearCalificacionesVacias({"materias":materias, "legajo":legajo})
+        Calificaciones.crearCalificacionesVacias({ materias: materias, legajo: legajo });
 
         // Guarda un nuevo usuario en usuarios.JSON
         const newUsuario = { nuevoLegajo: legajo, contraseña, rol: "alumno/padre" };
-        Usuarios.agregarUsuario(newUsuario)
+        Usuarios.agregarUsuario(newUsuario);
         return newBody;
       }
     } catch (error) {
@@ -98,12 +107,10 @@ class alumnosController {
   static async borrar(legajo) {
     try {
       // Borrado del alumno de alumnos.JSON
-      const alumnoBorrado = await Alumno.findOneAndDelete({legajo:legajo})
+      const alumnoBorrado = await Alumno.findOneAndDelete({ legajo: legajo });
       if (alumnoBorrado) {
-        
-
         // Borrado del usuario de usuarios.JSON
-        Usuarios.borrarUsuario(legajo)
+        Usuarios.borrarUsuario(legajo);
 
         // Borrado de las calificaciones del alumno
         Calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo);
@@ -115,11 +122,7 @@ class alumnosController {
     } catch (error) {
       throw error;
     }
-
   }
-  
-  
-  
 
   /* /////////// Método auxiliar de uso en desarrollo///////////
 
@@ -139,7 +142,6 @@ class alumnosController {
       this.agregar(alumno);
     });
   } */
-
 }
 
 module.exports = alumnosController;

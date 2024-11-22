@@ -16,15 +16,14 @@ class calificacionesController {
   }
 
 
-  static cargarCalificacionesAlJSON(datosAlumno) {
+  static async cargarCalificacionesDB(datosAlumno) {
     const materia = datosAlumno.materia;
     delete datosAlumno.materia;
     for (const [legajo, calificacion] of Object.entries(datosAlumno)) {
-      calificaciones.find(it => it.materia == materia && it.legajo == legajo).calificacion =
-        calificacion;
+     await Calificacion.updateOne({materia:materia, legajo:legajo}, {calificacion:calificacion})
+      /* calificaciones.find(it => it.materia == materia && it.legajo == legajo).calificacion =
+        calificacion; */
     }
-
-    this.actualizarJson(calificaciones)
   }
 
   static borrarCalificacionesDeJsonPorLegajo(legajo) {
@@ -52,6 +51,15 @@ class calificacionesController {
   /* obtenerCalificacionesPorMateria(materia) {
     return calificaciones.filter(it => it.materia == materia);
   } */
+
+    static async buscarCalificacionLegajoMateria(legajo, materia){
+      try {
+        return await Calificacion.find({legajo:legajo, materia:materia})
+       
+      } catch (error) {
+        throw error;
+      }
+    }
 }
 
 module.exports = calificacionesController;

@@ -13,9 +13,9 @@ router.get("/api/:legajo", async (req, res) => {
 });
 
 /* Muestra los cursos en los que da clases el profesor, y sus materias, para cargar las calificaciones */
-router.get("/profesor/:legajo", (req, res) => {
+router.get("/profesor/:legajo", async (req, res) => {
   const { legajo } = req.params;
-  const cursosDeProf = Cursos.buscarCursosPorProfesor(parseInt(legajo));
+  const cursosDeProf = await Cursos.buscarCursosPorProfesor(parseInt(legajo));
   res.render("seleccionCursoParaCalificaciones", {
     cursosDeProf: cursosDeProf,
     legajoProfe: String(legajo)
@@ -23,9 +23,9 @@ router.get("/profesor/:legajo", (req, res) => {
 });
 
 /* Formulario para carga de calificaciones */
-router.get("/form", (req, res) => {
+router.get("/form", async (req, res) => {
   const { materia, curso, legajo } = req.query;
-  const alumnosDelCurso = Alumnos.mostrarPorCursoYMateria(curso, materia);
+  const alumnosDelCurso = await Alumnos.mostrarPorCursoYMateria(curso, materia);
   res.render("cargarCalificaciones", {
     alumnos: alumnosDelCurso,
     materia: materia,
@@ -35,12 +35,12 @@ router.get("/form", (req, res) => {
 });
 
 /* Ruta POST para guardado de calificaciones */
-router.post("/cargar", (req, res) => {
+router.post("/cargar", async (req, res) => {
   const { legajo } = req.body;
   delete req.body.legajo;
   const calificacionesDelForm = req.body;
 
-  Calificaciones.cargarCalificacionesAlJSON(calificacionesDelForm);
+  Calificaciones.cargarCalificacionesDB(calificacionesDelForm);
   res.render("exito", {
     mensaje: "Se guardó correctamente",
     url: `/calificaciones/profesor/${legajo}`
