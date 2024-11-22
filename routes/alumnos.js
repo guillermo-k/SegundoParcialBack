@@ -43,9 +43,9 @@ router.post("/", async (req, res) => {
 //   Alumnos.borrarMaterias() 
 // })
 
-/* router.get("/cargaautomatica", (req, res) => {
+ router.get("/api/cargaautomatica", (req, res) => {
   Alumnos.CargaAutomaticaAlumnos();
-  res.send("ando");
-}); */
+  res.send("andó");
+}); 
 
 module.exports = router;

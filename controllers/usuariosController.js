@@ -1,26 +1,21 @@
-const fs = require("fs");
-const path = require("path");
-let usuarios = require("../database/usuarios.json");
+const Usuario = require("../models/Usuario");
 
 class usuariosController{
-    static borrarUsuario(legajo){
-        usuarios = usuarios.filter(it => it.legajo != legajo);
-        this.actualizarJson(usuarios)
+    static async borrarUsuario(legajo){
+        await Usuario.deleteOne({legajo:legajo})
     }
 
-    static getUsuario(legajo){
-        return usuarios.find(usuario=> usuario.legajo == legajo)
+    static async getUsuario(legajo){
+        return await Usuario.findOne({legajo:legajo})
     }
 
-    static agregarUsuario(usuario){
-        usuarios.push(usuario)
-        this.actualizarJson(usuarios)
+    static async agregarUsuario(usuario){
+        const newUsuario = new Usuario(usuario);
+        await newUsuario.save()
     }
 
-
-    static actualizarJson(usuarios){
-        const filePathUsuarios = path.join(__dirname, "../database/usuarios.json");
-        fs.writeFileSync(filePathUsuarios, JSON.stringify(usuarios, null, 2), "utf-8");
+    static async getUsuarios(){
+        return await Usuario.find();
     }
 }
 

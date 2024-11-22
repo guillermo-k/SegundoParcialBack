@@ -1,5 +1,5 @@
 /* const Usuarios = require("../controllers/usuariosController") */
-const Usuario = require("../models/usuario")
+const Usuario = require("../models/Usuario")
 
 
 /*   Middleware para identificar qué tipo de rol tiene el usuario y redireccionarlo acorde en la función siguiente */

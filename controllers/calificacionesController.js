@@ -26,27 +26,18 @@ class calificacionesController {
     }
   }
 
-  static borrarCalificacionesDeJsonPorLegajo(legajo) {
-    calificaciones = calificaciones.filter(it => it.legajo != legajo);
-    this.actualizarJson(calificaciones)
+  static async borrarCalificacionesLegajo(legajo) {
+    await Calificacion.deleteMany({legajo:legajo})
   }
 
-  static crearCalificacionesVacias(datos){
-    datos.materias.forEach(materia => {
-      calificaciones.push({
-        "legajo": datos.legajo,
-        "materia": materia,
-        "calificacion": ""
-      })
+  static async crearCalificacionesVacias(datos){
+    datos.materias.forEach(async materia => {
+      const calificacion = new Calificacion({legajo:datos.legajo,materia:materia,calificacion:"Aún sin calificar"});
+      const nuevoUsuario = await calificacion.save();
     });
-    this.actualizarJson(calificaciones)
   }
 
-  static actualizarJson(datos){
-    const filePath = path.join(__dirname, "../database/calificaciones.json");
-    fs.writeFileSync(filePath, JSON.stringify(datos, null, 2), "utf-8");
-  }
-
+  
   /// Por ahora en desuso
   /* obtenerCalificacionesPorMateria(materia) {
     return calificaciones.filter(it => it.materia == materia);

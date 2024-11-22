@@ -1,10 +1,9 @@
-/* const fs = require("fs");
-const path = require("path"); */
-
 /* Controllers */
 const Usuarios = require("./usuariosController");
 const Calificaciones = require("./calificacionesController");
 const Cursos = require("./cursosController");
+const bcrypt = require('bcrypt');
+
 
 /* Model Alumno */
 const Alumno = require("../models/Alumno");
@@ -55,7 +54,6 @@ class alumnosController {
             element.legajo,
             materia
           );
-          console.log("materias dentro del map", element.materias)
         })
       );
 
@@ -66,8 +64,6 @@ class alumnosController {
           return element; 
         })
       ); */
-/* console.log("try, alumnos", alumnos)
-console.log("try, alumnosCurso", alumnosCurso) */
       return alumnos;
     } catch (error) {
       throw error;
@@ -76,9 +72,9 @@ console.log("try, alumnosCurso", alumnosCurso) */
 
   // Método para agregar un nuevo alumno
   static async agregar(body) {
+    console.log("algo")
     try {
       const { nombre, curso, padre_madre, contraseña } = body;
-
       if (nombre && curso && padre_madre && contraseña) {
         ////Generación de número de legajo
         const ultimoLegajo = await Alumno.findOne().sort({ legajo: -1 });
@@ -90,13 +86,13 @@ console.log("try, alumnosCurso", alumnosCurso) */
 
         /* alumnos.push(newBody); */
         const nuevoAlumno = new Alumno(newBody);
-        const savedAlumno = await nuevoAlumno.save();
+        const savedAlumno = await Promise.resolve(nuevoAlumno.save());
 
         // Guardar datos de calificaciones vacías del alumno
         Calificaciones.crearCalificacionesVacias({ materias: materias, legajo: legajo });
 
         // Guarda un nuevo usuario en usuarios.JSON
-        const newUsuario = { nuevoLegajo: legajo, contraseña, rol: "alumno/padre" };
+        const newUsuario = { legajo: legajo, contraseña, rol: "alumno/padre" };
         Usuarios.agregarUsuario(newUsuario);
         return newBody;
       }
@@ -113,7 +109,7 @@ console.log("try, alumnosCurso", alumnosCurso) */
         Usuarios.borrarUsuario(legajo);
 
         // Borrado de las calificaciones del alumno
-        Calificaciones.borrarCalificacionesDeJsonPorLegajo(legajo);
+        Calificaciones.borrarCalificacionesLegajo(legajo);
 
         return `El alumno ${alumnoBorrado.nombre} ha sido eliminado correctamente de la base de datos.`;
       } else {
@@ -124,13 +120,13 @@ console.log("try, alumnosCurso", alumnosCurso) */
     }
   }
 
-  /* /////////// Método auxiliar de uso en desarrollo///////////
+   /////////// Método auxiliar de uso en desarrollo///////////
 
-  CargaAutomaticaAlumnos() {
-    alumnos2.forEach(a => {
-      let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  static async CargaAutomaticaAlumnos() {
+    let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for(const a of alumnos) {
       a.contraseña = Array.from(
-        { length: 4 },
+        { length: 8 },
         () => caracteres[Math.floor(Math.random() * caracteres.length)]
       ).join("");
       let alumno = {
@@ -139,9 +135,10 @@ console.log("try, alumnosCurso", alumnosCurso) */
         padre_madre: a.padre_madre,
         contraseña: a.contraseña
       };
-      this.agregar(alumno);
-    });
-  } */
+      // setTimeout(this.agregar(alumno), 2000);
+      await this.agregar(alumno);
+    };
+  }
 }
 
 module.exports = alumnosController;
