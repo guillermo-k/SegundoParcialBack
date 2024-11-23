@@ -21,8 +21,7 @@ class calificacionesController {
     delete datosAlumno.materia;
     for (const [legajo, calificacion] of Object.entries(datosAlumno)) {
      await Calificacion.updateOne({materia:materia, legajo:legajo}, {calificacion:calificacion})
-      /* calificaciones.find(it => it.materia == materia && it.legajo == legajo).calificacion =
-        calificacion; */
+      
     }
   }
 

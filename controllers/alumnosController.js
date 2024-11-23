@@ -43,7 +43,6 @@ class alumnosController {
     }
   }
 
-  /*  *********SE USA????*********** */
   // Método para mostrar un alumno por su curso
   static async mostrarPorCursoYMateria(curso, materia) {
     try {
@@ -57,13 +56,7 @@ class alumnosController {
         })
       );
 
-      /* const alumnosConCalificaciones = await Promise.all(
-        alumnos.map(async (element) => {
-          
-          element.materias = await Calificaciones.obtenerCalificacionesPorLegajo(element.legajo);
-          return element; 
-        })
-      ); */
+     
       return alumnos;
     } catch (error) {
       throw error;
@@ -84,7 +77,7 @@ class alumnosController {
 
         const newBody = { nombre, curso, materias, padre_madre, legajo: legajo };
 
-        /* alumnos.push(newBody); */
+      
         const nuevoAlumno = new Alumno(newBody);
         const savedAlumno = await Promise.resolve(nuevoAlumno.save());
 
