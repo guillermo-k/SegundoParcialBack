@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const Alumnos = require("../controllers/alumnosController");
+const autorizacion = require("../middleware/autorizacion")
 
 //////////////////////////////////////Rutas//////////////////////////////////////
 
@@ -14,12 +15,12 @@ router.delete("/:legajo", async (req, res) => {
 });
 
 /* Agrega un alumno (ingreso administrador) */
-router.get("/agregar", (req, res) => {
+router.get("/agregar",autorizacion(["administrador"]), (req, res) => {
   res.render("agregar_alumno");
 });
 
 /* Muestra lista de alumnos o alumno en particular según si se le pasa legajo por parámetro */
-router.get("/:legajo?", async (req, res) => {
+router.get("/:legajo?",autorizacion(["administrador","profesor","alumno/padre"]), async (req, res) => {
   const { legajo } = req.params;
 
   const respuesta = legajo ? await Alumnos.mostrarPorLegajo(legajo) : await Alumnos.mostrar();
@@ -31,7 +32,7 @@ router.get("/:legajo?", async (req, res) => {
 });
 
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
-router.post("/", async (req, res) => {
+router.post("/", autorizacion(["administrador"]), async (req, res) => {
   const respuesta = await Alumnos.agregar(req.body);
   /* 
   ********************************************************************
@@ -48,8 +49,8 @@ router.post("/", async (req, res) => {
 //   Alumnos.borrarMaterias()
 // })
 
-router.get("/api/cargaautomatica", (req, res) => {
-  Alumnos.CargaAutomaticaAlumnos();
-});
+// router.get("/api/cargaautomatica", (req, res) => {
+//   Alumnos.CargaAutomaticaAlumnos();
+// });
 
 module.exports = router;
