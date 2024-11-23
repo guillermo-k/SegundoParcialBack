@@ -80,6 +80,7 @@ class alumnosController {
 
         // Guarda un nuevo usuario
         const newUsuario = { legajo: legajo, contraseña, rol: "alumno/padre" };
+        console.log("Legajo: ",legajo,", Contraseña: ",contraseña);
         Usuarios.agregarUsuario(newUsuario);
         return newBody;
       }
@@ -108,25 +109,6 @@ class alumnosController {
     }
   }
 
-  /////////// Método auxiliar de uso en desarrollo///////////
-
-  static async CargaAutomaticaAlumnos() {
-    let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (const a of alumnos) {
-      a.contraseña = Array.from(
-        { length: 8 },
-        () => caracteres[Math.floor(Math.random() * caracteres.length)]
-      ).join("");
-      let alumno = {
-        nombre: a.nombre,
-        curso: a.curso,
-        padre_madre: a.padre_madre,
-        contraseña: a.contraseña
-      };
-      // setTimeout(this.agregar(alumno), 2000);
-      await this.agregar(alumno);
-    }
-  }
 }
 
 module.exports = alumnosController;

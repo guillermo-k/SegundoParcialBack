@@ -16,6 +16,7 @@ const alumnos = require("./routes/alumnos");
 const calificaciones = require("./routes/calificaciones");
 const usuarios = require("./routes/usuarios");
 const index = require("./routes/index");
+const dev = require("./routes/dev");
 
 
 // CAMBIO DE MOTOR DE VISTAS DE JADE A PUG*********
@@ -45,6 +46,7 @@ app.use("/", index);
 app.use("/alumnos", alumnos);
 app.use("/calificaciones", calificaciones);
 app.use("/usuarios", usuarios);
+app.use("/dev", dev);
 
 
 // catch 404 and forward to error handler

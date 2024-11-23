@@ -393,15 +393,5 @@
     "nuevoLegajo": 1042,
     "contraseña": "1234",
     "rol": "alumno/padre"
-  },
-  {
-    "nuevoLegajo": 1043,
-    "contraseña": "1234",
-    "rol": "alumno/padre"
-  },
-  {
-    "nuevoLegajo": 1044,
-    "contraseña": "1234",
-    "rol": "alumno/padre"
   }
 ]

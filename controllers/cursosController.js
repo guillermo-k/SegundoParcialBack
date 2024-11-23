@@ -6,11 +6,7 @@ const Curso = require("../models/curso");
 
 class cursosController {
   static async buscarCursosPorProfesor(legajo) {
-    /*   const cursosDeProf = cursos.filter(it => it.profesores.includes(legajo));
-        return cursosDeProf; */
-
     const cursosDeProf = await Curso.find({ profesores: { $in: [legajo] } });
-    console.log("cursosdeprof desde controller metodo buscarcursosporprofesor", cursosDeProf);
     return cursosDeProf;
   }
 

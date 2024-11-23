@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
 const Alumnos = require("../controllers/alumnosController");
-const autorizacion = require("../middleware/autorizacion")
+const autorizacion = require("../middleware/autorizacion");
 
 //////////////////////////////////////Rutas//////////////////////////////////////
 
 // API Borrado de un alumno por legajo
-router.delete("/:legajo", async (req, res) => {
+router.delete("/:legajo", autorizacion(["administrador"]), async (req, res) => {
   const { legajo } = req.params;
   const respuesta = await Alumnos.borrar(legajo);
   respuesta
@@ -43,14 +43,5 @@ router.post("/", autorizacion(["administrador"]), async (req, res) => {
 
 
 
-//////////////////////Rutas auxiliares para uso en desarrollo//////////////////////
-
-// router.get("/borrar/materias",(req,res)=>{
-//   Alumnos.borrarMaterias()
-// })
-
-// router.get("/api/cargaautomatica", (req, res) => {
-//   Alumnos.CargaAutomaticaAlumnos();
-// });
 
 module.exports = router;
