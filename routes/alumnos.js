@@ -4,7 +4,7 @@ const Alumnos = require("../controllers/alumnosController");
 
 //////////////////////////////////////Rutas//////////////////////////////////////
 
-// Borrado de un alumno por legajo
+// API Borrado de un alumno por legajo
 router.delete("/:legajo", async (req, res) => {
   const { legajo } = req.params;
   const respuesta = await Alumnos.borrar(legajo);
@@ -28,24 +28,28 @@ router.get("/:legajo?", async (req, res) => {
   } else {
     res.status(400).render("error", { mensaje: "El legajo ingresado no existe" });
   }
-}); 
+});
 
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
 router.post("/", async (req, res) => {
   const respuesta = await Alumnos.agregar(req.body);
-
+  /* 
+  ********************************************************************
+  A ARREGLAR: cuando muestra al alumno ni bien lo agrega, le deja las materias que vienen de alumno, no de calificaciones. Al hacer F5 sí las carga bien (??? 
+ ********************************************************************* */
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });
+
+
 
 //////////////////////Rutas auxiliares para uso en desarrollo//////////////////////
 
 // router.get("/borrar/materias",(req,res)=>{
-//   Alumnos.borrarMaterias() 
+//   Alumnos.borrarMaterias()
 // })
 
- router.get("/api/cargaautomatica", (req, res) => {
+router.get("/api/cargaautomatica", (req, res) => {
   Alumnos.CargaAutomaticaAlumnos();
-  res.send("andó");
-}); 
+});
 
 module.exports = router;

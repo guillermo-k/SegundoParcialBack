@@ -1,9 +1,9 @@
 {
-  "name": "primer-parcial",
+  "name": "segundo-parcial",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --ignore database/ ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

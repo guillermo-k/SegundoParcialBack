@@ -1,6 +1,5 @@
 /* const Usuarios = require("../controllers/usuariosController") */
-const Usuario = require("../models/Usuario")
-
+const Usuario = require("../models/Usuario");
 
 /* *************FUNCIÓN VIEJA SIN DESHASHEO************ */
 
@@ -19,7 +18,6 @@ const Usuario = require("../models/Usuario")
 module.exports = autenticarUsuario; */
 
 /* ******************************************************** */
-
 
 // Middleware para autenticar al usuario
 async function autenticarUsuario(req, res, next) {
