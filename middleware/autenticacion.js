@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 
 // Middleware para autenticar al usuario
 async function autenticarUsuario(req, res, next) {
-  console.log("Cuerpo recibido en req.body:", req.body); // Verifica qué llega aquí
   const { legajo, pass } = req.body;
 
   if (!legajo || !pass) {

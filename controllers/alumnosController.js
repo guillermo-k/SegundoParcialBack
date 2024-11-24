@@ -6,7 +6,6 @@ const Cursos = require("./cursosController");
 /* Model Alumno */
 const Alumno = require("../models/Alumno");
 
-let alumnos = require("../database/alumnos.json");
 
 class alumnosController {
   // Método para mostrar todos los alumnos
@@ -80,7 +79,6 @@ class alumnosController {
 
         // Guarda un nuevo usuario
         const newUsuario = { legajo: legajo, contraseña, rol: "alumno/padre" };
-        console.log("Legajo: ",legajo,", Contraseña: ",contraseña);
         Usuarios.agregarUsuario(newUsuario);
         return newBody;
       }

@@ -1,7 +1,3 @@
-/* const fs = require("fs");
-const path = require("path"); */
-
-const cursos = require("../database/cursos.json");
 const Curso = require("../models/curso");
 
 class cursosController {

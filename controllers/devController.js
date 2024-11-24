@@ -2,7 +2,6 @@
 const Usuario = require("../models/Usuario")
 const Curso = require("../models/curso");
 const alumnosController = require("./alumnosController");
-const alumnos = require("../database/alumnos.json");
 const Alumno = require("../models/Alumno");
   /////////// Método auxiliar de uso en desarrollo///////////
 
@@ -37,7 +36,6 @@ const Alumno = require("../models/Alumno");
           ).join("");
         const profe = new Usuario({legajo:prof, contraseña:contraseña, rol:"profesor"});
         profe.save();
-        console.log("legajo",prof,"    contraseña",contraseña)
     }
     )
   }
@@ -51,12 +49,11 @@ for(i=1;i<6;i++){
         ).join("");
     const admin = new Usuario({legajo:i*10, contraseña:contraseña, rol:"administrador"});
     await admin.save();
-    console.log("legajo",i*10,"    contraseña",contraseña)}
+  }
 }
 
 async function BorradoDeAlumnos() {
     const alumnos = await Alumno.find({}, { legajo: 1, _id: 0 });
-    console.log(alumnos);
     // alumnos.forEach( async alumno=>{
     //     await alumnosController.borrar(alumno.legajo);
     // })
