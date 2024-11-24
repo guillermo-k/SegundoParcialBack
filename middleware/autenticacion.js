@@ -1,11 +1,15 @@
 /* const Usuarios = require("../controllers/usuariosController") */
 const Usuario = require("../models/Usuario");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // Middleware para autenticar al usuario
 async function autenticarUsuario(req, res, next) {
-  console.log(res.body, "desde la app")
+  console.log("Cuerpo recibido en req.body:", req.body); // Verifica qué llega aquí
   const { legajo, pass } = req.body;
+
+  if (!legajo || !pass) {
+    return res.status(400).send("Datos incompletos");
+  }
 
   try {
     const usuario = await Usuario.findOne({ legajo: legajo });
@@ -19,12 +23,11 @@ async function autenticarUsuario(req, res, next) {
       return res.status(401).send("Credenciales incorrectas: Contraseña incorrecta");
     }
 
-    res.cookie('token', generarToken(usuario), {
-    
-      httpOnly: true,     // Esto hace que la cookie no sea accesible desde JavaScript (mejor seguridad)
+    res.cookie("token", generarToken(usuario), {
+      httpOnly: true, // Esto hace que la cookie no sea accesible desde JavaScript (mejor seguridad)
       //secure: process.env.NODE_ENV === 'production',  // Si estás en producción, usa "secure" (requiere HTTPS)
-      maxAge: 3600000,    // Tiempo de expiración de la cookie (en milisegundos, 1 hora en este caso)
-      sameSite: 'strict'  // Mejora la seguridad al prevenir que la cookie se envíe en solicitudes de otros sitios
+      maxAge: 3600000, // Tiempo de expiración de la cookie (en milisegundos, 1 hora en este caso)
+      sameSite: "strict" // Mejora la seguridad al prevenir que la cookie se envíe en solicitudes de otros sitios
     });
 
     // Agregar el rol al objeto req para usarlo en las rutas siguientes
@@ -38,10 +41,10 @@ async function autenticarUsuario(req, res, next) {
 function generarToken(usuario) {
   const payload = {
     legajo: usuario.legajo,
-    rol: usuario.rol, // alumno/padre, profesor, administrador
+    rol: usuario.rol // alumno/padre, profesor, administrador
   };
 
-  const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' }); 
+  const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: "1h" });
   return token;
 }
 

@@ -1,22 +1,39 @@
 const request = require('supertest');
 const express = require('express');
-const router = require("../routes/index");
+const router = require('../routes/index');
 const app = express();
+const DB = require('../db');
+
+// Mock de dependencias
+/* jest.mock('../models/Usuario');
+jest.mock('jsonwebtoken');
+
+const Usuario = require('../models/Usuario');
+const jwt = require('jsonwebtoken');
+ */
+// Mocks
+/* Usuario.findOne = jest.fn().mockResolvedValue({
+  legajo: '1000',
+  rol: 'alumno/padre',
+  comparePassword: jest.fn().mockResolvedValue(true),
+});
+jwt.sign = jest.fn().mockReturnValue('mocked_token');
+ */
+// Configurar app
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
-const DB = require("../db");
-beforeAll(()=>{DB.connectDB()})
-afterAll(()=>{DB.disconnectDB()})
 
+beforeAll(() => DB.connectDB());
+afterAll(() => DB.disconnectDB());
 
-describe(`Testing de endpoints` , ()=>{
+describe('Testing de endpoints', () => {
+  it('Logín con credenciales correctas', async () => {
+    const response = await request(app)
+      .post('/')
+      .set('Content-Type', 'application/json')
+      .send({ legajo: '1000', pass: 'iPvlb9bb' });
 
-    it(`Logín con credenciales correctas`, async ()=>{
-        const req = {};
-        req.body = { legajo: '1000', pass: 'iPvlb9bb' };
-        console.log(req, "desde el test")
-        const response = await request(app).post('/').send(req.body);
-
-        //expect(response.statusCode).toBe(302); // Redirección
-        expect(response.headers.location).toBe('/alumnos/1000');
-    })
-})
+    expect(response.headers.location).toBe('/alumnos/1000');
+  });
+});
