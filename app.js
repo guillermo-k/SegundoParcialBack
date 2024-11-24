@@ -8,8 +8,8 @@ require("dotenv").config()
 
 
 var app = express();
-const connectDB = require("./db")
-connectDB;
+const DB = require("./db")
+DB.connectDB();
 
 /* **************IMPORTAR TODOS LOS ARCHIVOS DE RUTAS************ */
 const alumnos = require("./routes/alumnos");

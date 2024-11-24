@@ -9,11 +9,19 @@ const connectDB = async () => {
     const url =
       "mongodb+srv://admin:1234@cluster0.qchhf.mongodb.net/Escuela?retryWrites=true&w=majority&appName=Cluster0";
     await mongoose.connect(url);
-    console.log("Conectado a MongoDB"); // Imprime un mensaje si la conexión es exitosa.
+    // console.log("Conectado a MongoDB"); // Imprime un mensaje si la conexión es exitosa.
   } catch (err) {
     console.error("Error de conexión a MongoDB:", err); // Imprime el error si la conexión falla.
     process.exit(1); // Termina el proceso si no se puede conectar a la base de datos.
   }
 };
 
-module.exports = connectDB(); // Exporta la función para que pueda ser utilizada en otros módulos.
+const disconnectDB = async () => {
+  try{
+    await mongoose.connection.close
+  }catch (err){
+
+  }
+}
+
+module.exports = {connectDB,disconnectDB}; // Exporta la función para que pueda ser utilizada en otros módulos.
