@@ -18,7 +18,6 @@ const Alumno = require("../models/Alumno");
         padre_madre: a.padre_madre,
         contraseña: a.contraseña
       };
-      // setTimeout(this.agregar(alumno), 2000);
       await alumnosController.agregar(alumno);
     }
   }
