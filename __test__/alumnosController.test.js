@@ -18,8 +18,6 @@ describe(`Testeando busqueda de alumno por legajo`, ()=>{
         const data2 = alumnosController.mostrarPorLegajo(-1000);
         expect(data2).toBeNull;
         expect(data2.legajo).toBeUndefinided;
-        // expect(data2.curso).not.toContain("2B");
-        // expect(data2.nombre).not.toContain("Diego Fernández");
     });
     
 });
