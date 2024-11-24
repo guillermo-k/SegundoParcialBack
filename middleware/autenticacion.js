@@ -40,7 +40,7 @@ function generarToken(usuario) {
     rol: usuario.rol, // alumno/padre, profesor, administrador
   };
 
-  const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' }); // Cambia el secreto por una variable de entorno
+  const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' }); 
   return token;
 }
 
