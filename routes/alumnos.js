@@ -34,10 +34,6 @@ router.get("/:legajo?",autorizacion(["administrador","profesor","alumno/padre"])
 /* Agrega un alumno y si está bien agregado lo muestra en vista */
 router.post("/", autorizacion(["administrador"]), async (req, res) => {
   const respuesta = await Alumnos.agregar(req.body);
-  /* 
-  ********************************************************************
-  A ARREGLAR: cuando muestra al alumno ni bien lo agrega, le deja las materias que vienen de alumno, no de calificaciones. Al hacer F5 sí las carga bien (??? 
- ********************************************************************* */
   respuesta ? res.redirect(`/alumnos/${respuesta.legajo}`) : res.sendStatus(400);
 });
 

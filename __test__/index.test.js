@@ -6,19 +6,6 @@ const DB = require('../db');
 
 // Mock de dependencias
 jest.mock('jsonwebtoken');
-/* jest.mock('../models/Usuario');
-
-const Usuario = require('../models/Usuario');
-const jwt = require('jsonwebtoken');
- */
-// Mocks
-/* Usuario.findOne = jest.fn().mockResolvedValue({
-  legajo: '1000',
-  rol: 'alumno/padre',
-  comparePassword: jest.fn().mockResolvedValue(true),
-});
-jwt.sign = jest.fn().mockReturnValue('mocked_token');
- */
 // Configurar app
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
